@@ -5,6 +5,7 @@
 //  Created by Vid Tadel on 12/4/22.
 //
 
+import Combine
 import SensorReaderKit
 import SwiftUI
 
@@ -13,7 +14,7 @@ struct FavoriteModel {
 }
 
 protocol FavoritesProvider {
-    var favorites: [FavoriteModel] { get async throws }
+    var favorites: CurrentValueSubject<[FavoriteModel], Error> { get }
 }
 
 struct DashboardView: View {
@@ -67,6 +68,8 @@ extension DashboardView {
         let readingsProvider: any ReadingsProvider
         let favoritesProvider: any FavoritesProvider
 
+        private var cancellables = Set<AnyCancellable>()
+
         @Published var favoriteReadings: [ReadingsList.ReadingModel] = []
 
         init(readingsProvider: any ReadingsProvider,
@@ -80,31 +83,41 @@ extension DashboardView {
 
         @MainActor
         func load() async {
-            do {
-                let readings = try await readingsProvider.readings()
-                let favorites = try await favoritesProvider.favorites
-                favoriteReadings = readings.filter { reading in
-                    favorites.contains { favorite in
-                        reading.id == favorite.id
+            let readings = Future<[any SensorReading], Error> { [readingsProvider] promise in
+                Task {
+                    do {
+                        let readings = try await readingsProvider.readings()
+                        promise(.success(readings))
+                    } catch {
+                        promise(.failure(error))
                     }
-                }.map(ReadingsList.ReadingModel.init(from:))
-            } catch {
-                print("Show \(error)")
+                }
             }
+            readings.combineLatest(favoritesProvider.favorites)
+                .sink { completion in
+                    print(completion)
+                } receiveValue: { [weak self] readings, favorites in
+                    guard let self = self else { return }
+                    self.favoriteReadings = readings.filter { reading in
+                        favorites.contains { favorite in
+                            reading.id == favorite.id
+                        }
+                    }.map(ReadingsList.ReadingModel.init(from:))
+                }.store(in: &cancellables)
         }
     }
 }
 
 struct DashboardView_Previews: PreviewProvider {
     struct MockFavoriteProvider: FavoritesProvider {
-        var favorites: [FavoriteModel]
+        let favorites: CurrentValueSubject<[FavoriteModel], Error>
 
         init() {
             let mock = ReadingsList_Previews.MockProvider().mockReadings.first!
             let model = ReadingsList.ReadingModel(from: mock)
-            favorites = [
+            favorites = CurrentValueSubject([
                 .init(id: model.id)
-            ]
+            ])
         }
     }
     static var previews: some View {
