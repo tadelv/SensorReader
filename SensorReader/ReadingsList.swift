@@ -83,6 +83,13 @@ extension ReadingsList {
         let name: String
         let value: String
         let unit: String
+
+        init(from reading: SensorReading) {
+            self.device = reading.sensorClass
+            self.name = reading.name
+            self.value = reading.value
+            self.unit = reading.unit
+        }
     }
 
     @MainActor
@@ -107,12 +114,7 @@ extension ReadingsList {
             state = .loading
             do {
                 let data = try await provider.readings()
-                readings = data.map {
-                    .init(device: $0.sensorClass,
-                          name: $0.name,
-                          value: $0.value,
-                          unit: $0.unit)
-                }
+                readings = data.map(ReadingModel.init(from:))
                 state = .idle
             } catch {
                 state = .error(error)
@@ -130,37 +132,39 @@ struct ReadingsList_Previews: PreviewProvider {
             var unit: String
             var updateTime: Date { Date() }
         }
+
+        var mockReadings: [MockReading] = [
+            MockReading(name: "Temperature",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature1",
+                        value: "21",
+                        unit: "C"),
+            MockReading(name: "Temperature2",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature3",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature4",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature5",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature6",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature7",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature8",
+                        value: "20",
+                        unit: "C")
+        ]
+
         func readings() async throws -> [MockReading] {
-            sleep(1)
-            return [
-                MockReading(name: "Temperature",
-                            value: "20",
-                            unit: "C"),
-                MockReading(name: "Temperature1",
-                            value: "21",
-                            unit: "C"),
-                MockReading(name: "Temperature2",
-                            value: "20",
-                            unit: "C"),
-                MockReading(name: "Temperature3",
-                            value: "20",
-                            unit: "C"),
-                MockReading(name: "Temperature4",
-                            value: "20",
-                            unit: "C"),
-                MockReading(name: "Temperature5",
-                            value: "20",
-                            unit: "C"),
-                MockReading(name: "Temperature6",
-                            value: "20",
-                            unit: "C"),
-                MockReading(name: "Temperature7",
-                            value: "20",
-                            unit: "C"),
-                MockReading(name: "Temperature8",
-                            value: "20",
-                            unit: "C")
-            ]
+            return mockReadings
         }
     }
     static var previews: some View {
