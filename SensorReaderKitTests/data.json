@@ -1,0 +1,1834 @@
+[
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "System: MSI MS-7A38",
+    "SensorName": "Virtual Memory Committed",
+    "SensorValue": "4795",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "System: MSI MS-7A38",
+    "SensorName": "Virtual Memory Available",
+    "SensorValue": "16122",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "System: MSI MS-7A38",
+    "SensorName": "Virtual Memory Load",
+    "SensorValue": "22.9",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "System: MSI MS-7A38",
+    "SensorName": "Physical Memory Used",
+    "SensorValue": "2457",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "System: MSI MS-7A38",
+    "SensorName": "Physical Memory Available",
+    "SensorValue": "13851",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "System: MSI MS-7A38",
+    "SensorName": "Physical Memory Load",
+    "SensorValue": "15",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "System: MSI MS-7A38",
+    "SensorName": "Page File Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 VID",
+    "SensorValue": "0.96875",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 VID",
+    "SensorValue": "0.775",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 VID",
+    "SensorValue": "0.7875",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 VID",
+    "SensorValue": "0.7875",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 Clock",
+    "SensorValue": "1596.34046612858",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 Clock",
+    "SensorValue": "1596.34046612858",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 Clock",
+    "SensorValue": "2973.18411816448",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 Clock",
+    "SensorValue": "2973.18411816448",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Bus Clock",
+    "SensorValue": "99.7712791330364",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 T0 Effective Clock",
+    "SensorValue": "205.318542480469",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 T1 Effective Clock",
+    "SensorValue": "9.37006348486454",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 T0 Effective Clock",
+    "SensorValue": "32.3354611944673",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 T1 Effective Clock",
+    "SensorValue": "4.58783462962679",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 T0 Effective Clock",
+    "SensorValue": "21.4231223881838",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 T1 Effective Clock",
+    "SensorValue": "9.26409101889363",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 T0 Effective Clock",
+    "SensorValue": "28.9772149705727",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 T1 Effective Clock",
+    "SensorValue": "20.3316874811284",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Average Effective Clock",
+    "SensorValue": "41.4510022060257",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 T0 Usage",
+    "SensorValue": "1.5",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 T1 Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 T0 Usage",
+    "SensorValue": "1.5",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 T1 Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 T0 Usage",
+    "SensorValue": "0.7",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 T1 Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 T0 Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 T1 Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Max CPU/Thread Usage",
+    "SensorValue": "1.5",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Total CPU Usage",
+    "SensorValue": "0.4625",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 T0 Utility",
+    "SensorValue": "1.63687770886428",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 T1 Utility",
+    "SensorValue": "0.252078758322163",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 T0 Utility",
+    "SensorValue": "0.868940095524573",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 T1 Utility",
+    "SensorValue": "0.113393641571331",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 T0 Utility",
+    "SensorValue": "0.572016503286873",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 T1 Utility",
+    "SensorValue": "0.231627497239153",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 T0 Utility",
+    "SensorValue": "0.78122071306628",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 T1 Utility",
+    "SensorValue": "0.543994866493173",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Total CPU Utility",
+    "SensorValue": "0.625054167468781",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 0 Ratio",
+    "SensorValue": "16",
+    "SensorUnit": "x",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 1 Ratio",
+    "SensorValue": "16",
+    "SensorUnit": "x",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 2 Ratio",
+    "SensorValue": "29.8",
+    "SensorUnit": "x",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G",
+    "SensorName": "Core 3 Ratio",
+    "SensorValue": "29.8",
+    "SensorUnit": "x",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Package C6 Residency",
+    "SensorValue": "77.8647766113281",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 0 C0 Residency",
+    "SensorValue": "10.6495170593262",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 1 C0 Residency",
+    "SensorValue": "9.55183029174805",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 2 C0 Residency",
+    "SensorValue": "9.56304836273193",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 3 C0 Residency",
+    "SensorValue": "10.053521156311",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 0 C1 Residency",
+    "SensorValue": "6.70337152481079",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 1 C1 Residency",
+    "SensorValue": "1.62042677402496",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 2 C1 Residency",
+    "SensorValue": "1.13064074516296",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 3 C1 Residency",
+    "SensorValue": "1.95364236831665",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 0 C6 Residency",
+    "SensorValue": "82.6471099853516",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 1 C6 Residency",
+    "SensorValue": "88.8277587890625",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 2 C6 Residency",
+    "SensorValue": "89.3062973022461",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: C-State Residency",
+    "SensorName": "Core 3 C6 Residency",
+    "SensorValue": "87.9928436279297",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Memory Clock",
+    "SensorValue": "1064.22697741905",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Memory Clock Ratio",
+    "SensorValue": "10.6666666666667",
+    "SensorUnit": "x",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Tcas",
+    "SensorValue": "15",
+    "SensorUnit": "T",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Trcd",
+    "SensorValue": "15",
+    "SensorUnit": "T",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Trp",
+    "SensorValue": "15",
+    "SensorUnit": "T",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Tras",
+    "SensorValue": "36",
+    "SensorUnit": "T",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Trc",
+    "SensorValue": "51",
+    "SensorUnit": "T",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Trfc",
+    "SensorValue": "374",
+    "SensorUnit": "T",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Memory Timings",
+    "SensorName": "Command Rate",
+    "SensorValue": "1",
+    "SensorUnit": "T",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU (Tctl/Tdie)",
+    "SensorValue": "28.75",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU SOC",
+    "SensorValue": "28.4668960571289",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "APU GFX",
+    "SensorValue": "26.8100471496582",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core0",
+    "SensorValue": "26.1966152191162",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core1",
+    "SensorValue": "26.2879467010498",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core2",
+    "SensorValue": "25.9001121520996",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core3",
+    "SensorValue": "26.1711311340332",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "L3 Cache",
+    "SensorValue": "26.5750503540039",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU Core Voltage (SVI2 TFN)",
+    "SensorValue": "0.626661360263824",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "SoC Voltage (SVI2 TFN)",
+    "SensorValue": "1.01249444484711",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU Core VID (Effective)",
+    "SensorValue": "0.99375",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU Core Current (SVI2 TFN)",
+    "SensorValue": "0.401436626911163",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "SoC Current (SVI2 TFN)",
+    "SensorValue": "3.37058520317078",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU TDC",
+    "SensorValue": "0.365134209394455",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU Package Power",
+    "SensorValue": "2.4269111582739",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core 0 Power",
+    "SensorValue": "0.07062928378582",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core 1 Power",
+    "SensorValue": "0.0163035077131733",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core 2 Power",
+    "SensorValue": "0.0084068369867071",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core 3 Power",
+    "SensorValue": "0.0219036926700064",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU Core Power (SVI2 TFN)",
+    "SensorValue": "0.420691967010498",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU SoC Power (SVI2 TFN)",
+    "SensorValue": "3.41279649734497",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Core+SoC Power (SVI2 TFN)",
+    "SensorValue": "3.83348846435547",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "APU STAPM",
+    "SensorValue": "5.91167116165161",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Infinity Fabric Clock (FCLK)",
+    "SensorValue": "563.389892578125",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Memory Controller Clock (UCLK)",
+    "SensorValue": "563.389892578125",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU TDC Limit",
+    "SensorValue": "0.561744937529931",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU PPT FAST Limit",
+    "SensorValue": "7.25960683822632",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "CPU PPT SLOW Limit",
+    "SensorValue": "7.39478969573975",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "APU STAPM Limit",
+    "SensorValue": "9.09487915039063",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Thermal Throttling (HTC)",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Thermal Throttling (PROCHOT CPU)",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "CPU [#0]: AMD Ryzen 5 2400G: Enhanced",
+    "SensorName": "Thermal Throttling (PROCHOT EXT)",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "System",
+    "SensorValue": "36",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "CPU",
+    "SensorValue": "28.75",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "VR MOS",
+    "SensorValue": "31",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "AUXTIN1",
+    "SensorValue": "30",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "PCH",
+    "SensorValue": "42",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "CPU (PECI)",
+    "SensorValue": "40",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "Vcore",
+    "SensorValue": "0.792",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "+5V",
+    "SensorValue": "5.12",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "+3.3V (AVCC)",
+    "SensorValue": "3.392",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "+3.3V (3VCC)",
+    "SensorValue": "3.376",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "+12V",
+    "SensorValue": "12.096",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "VIN4",
+    "SensorValue": "0.896",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "3VSB",
+    "SensorValue": "3.376",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "VBAT",
+    "SensorValue": "3.296",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "CPU +1.8V",
+    "SensorValue": "1.824",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "CPU VDDP",
+    "SensorValue": "0.92",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "VIN6",
+    "SensorValue": "0.72",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "CPU NB/SoC",
+    "SensorValue": "1.016",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "DIMM",
+    "SensorValue": "1.2",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "VIN7",
+    "SensorValue": "1.544",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "CPU",
+    "SensorValue": "1076",
+    "SensorUnit": "RPM",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "System 1",
+    "SensorValue": "802",
+    "SensorUnit": "RPM",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "System 2",
+    "SensorValue": "868",
+    "SensorUnit": "RPM",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "MSI B450M PRO-VDH PLUS (MS-7A38) (Nuvoton NCT6795D)",
+    "SensorName": "Chassis Intrusion",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Drive Temperature",
+    "SensorValue": "26",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Drive Failure",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Drive Warning",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Drive Temperature",
+    "SensorValue": "27",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Drive Failure",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Drive Warning",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Drive Airflow Temperature",
+    "SensorValue": "26",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Drive Remaining Life",
+    "SensorValue": "99",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Drive Failure",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Drive Warning",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Total Host Writes",
+    "SensorValue": "2336",
+    "SensorUnit": "GB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Drive Temperature",
+    "SensorValue": "54",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Drive Remaining Life",
+    "SensorValue": "100",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Drive Failure",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Drive Warning",
+    "SensorValue": "0",
+    "SensorUnit": "Yes/No",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Total Host Writes",
+    "SensorValue": "3505",
+    "SensorUnit": "GB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "S.M.A.R.T.: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Total Host Reads",
+    "SensorValue": "3461",
+    "SensorUnit": "GB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Read Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Write Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Total Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Read Rate",
+    "SensorValue": "0",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Write Rate",
+    "SensorValue": "0",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Read Total",
+    "SensorValue": "0",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0550824)",
+    "SensorName": "Write Total",
+    "SensorValue": "0",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Read Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Write Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Total Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Read Rate",
+    "SensorValue": "0",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Write Rate",
+    "SensorValue": "0",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Read Total",
+    "SensorValue": "47",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: WDC WD10EFRX-68JCSN0 (WD-WCC1U0396735)",
+    "SensorName": "Write Total",
+    "SensorValue": "0",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Read Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Write Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Total Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Read Rate",
+    "SensorValue": "0",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Write Rate",
+    "SensorValue": "0",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Read Total",
+    "SensorValue": "3",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: Samsung SSD 850 EVO 250GB (S21PNXAG603931N)",
+    "SensorName": "Write Total",
+    "SensorValue": "0",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Read Activity",
+    "SensorValue": "0.013",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Write Activity",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Total Activity",
+    "SensorValue": "0.013",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Read Rate",
+    "SensorValue": "0.016",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Write Rate",
+    "SensorValue": "0",
+    "SensorUnit": "MB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Read Total",
+    "SensorValue": "2126",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Drive: HP SSD EX900 250GB (HBSE28470300013)",
+    "SensorName": "Write Total",
+    "SensorValue": "117",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Temperature",
+    "SensorValue": "41",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Junction Temperature",
+    "SensorValue": "40",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU VR VDDC Temperature",
+    "SensorValue": "37",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Hot Spot Temperature",
+    "SensorValue": "42",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU VR SoC Temperature",
+    "SensorValue": "37.0000152587891",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU VR VDDIO Temperature",
+    "SensorValue": "37",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU VR VDDCI Temperature",
+    "SensorValue": "36",
+    "SensorUnit": "Â°C",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Core Voltage (VDDCR_GFX)",
+    "SensorValue": "0.725134789943695",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Voltage (VDDIO)",
+    "SensorValue": "1.25000214576721",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU SoC Voltage (VDDCR_SOC)",
+    "SensorValue": "1.05000078678131",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Voltage (VDDCI_MEM)",
+    "SensorValue": "0.675000369548798",
+    "SensorUnit": "V",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Fan",
+    "SensorValue": "0",
+    "SensorUnit": "RPM",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Core Current (VDDCR_GFX)",
+    "SensorValue": "0.257680714130402",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Current (VDDIO)",
+    "SensorValue": "2.5971086025238",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU SoC Current (VDDCR_SOC)",
+    "SensorValue": "2.23127269744873",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Current (VDDCI_MEM)",
+    "SensorValue": "2.74509739875793",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Core TDC Limit",
+    "SensorValue": "170",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU SOC TDC Limit",
+    "SensorValue": "14",
+    "SensorUnit": "A",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Core Power (VDDCR_GFX)",
+    "SensorValue": "0.186918467283249",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Power (VDDIO)",
+    "SensorValue": "3.24638557434082",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU SoC Power (VDDCR_SOC)",
+    "SensorValue": "2.34283471107483",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Power (VDDCI_MEM)",
+    "SensorValue": "1.85294139385223",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU ASIC Power",
+    "SensorValue": "11",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU PPT",
+    "SensorValue": "12.1311302185059",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU PPT Limit",
+    "SensorValue": "190",
+    "SensorUnit": "W",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Clock",
+    "SensorValue": "6",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Clock (Effective)",
+    "SensorValue": "6.69088220596313",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Clock",
+    "SensorValue": "200",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU SoC Clock",
+    "SensorValue": "195",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU UVD1 Clock",
+    "SensorValue": "0",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU UVD2 Clock",
+    "SensorValue": "0",
+    "SensorUnit": "MHz",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Utilization",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU D3D Usage",
+    "SensorValue": "0.0887825283034225",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Controller Utilization",
+    "SensorValue": "7",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Computing (High Priority Compute) Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Computing (Compute 3) Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Computing (Compute 0) Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Computing (Compute 1) Usage",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU PPT Limit",
+    "SensorValue": "6.38480537816098",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Core TDC Limit",
+    "SensorValue": "0.154532912899466",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU SOC TDC Limit",
+    "SensorValue": "15.9464086805071",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Edge Thermal Limit",
+    "SensorValue": "41.6666030883789",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Hotspot Thermal Limit",
+    "SensorValue": "37.9397895119407",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Thermal Limit",
+    "SensorValue": "38.18726675851",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU VR GFX Thermal Limit",
+    "SensorValue": "32.1737073815387",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU VR SOC Thermal Limit",
+    "SensorValue": "32.1737073815387",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU VR MEM Thermal Limit",
+    "SensorValue": "32.1737073815387",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Fan PWM",
+    "SensorValue": "0",
+    "SensorUnit": "%",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU D3D Memory Dedicated",
+    "SensorValue": "475.828125",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU D3D Memory Dynamic",
+    "SensorValue": "106.953125",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "PCIe Link Speed",
+    "SensorValue": "8",
+    "SensorUnit": "GT/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "GPU Memory Usage",
+    "SensorValue": "472",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "GPU [#0]: AMD Radeon RX 5700 XT: ",
+    "SensorName": "Framerate",
+    "SensorValue": "0",
+    "SensorUnit": "FPS",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Network: Realtek PCIe GbE Family Controller",
+    "SensorName": "Total DL",
+    "SensorValue": "1.83165264129639",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Network: Realtek PCIe GbE Family Controller",
+    "SensorName": "Total UP",
+    "SensorValue": "0.291328430175781",
+    "SensorUnit": "MB",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Network: Realtek PCIe GbE Family Controller",
+    "SensorName": "Current DL rate",
+    "SensorValue": "8.69407180521092",
+    "SensorUnit": "KB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Network: Realtek PCIe GbE Family Controller",
+    "SensorName": "Current UP rate",
+    "SensorValue": "0.0848131203473945",
+    "SensorUnit": "KB/s",
+    "SensorUpdateTime": 1670154944
+  },
+  {
+    "SensorApp": "HWiNFO",
+    "SensorClass": "Windows Hardware Errors (WHEA)",
+    "SensorName": "Total Errors",
+    "SensorValue": "0",
+    "SensorUnit": "",
+    "SensorUpdateTime": 1670154944
+  }
+]

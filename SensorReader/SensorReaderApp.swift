@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SensorReaderKit
 
 @main
 struct SensorReaderApp: App {
+    let reader = SensorReader(URLSession.shared)
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ReadingsList(provider: reader)
         }
     }
 }
