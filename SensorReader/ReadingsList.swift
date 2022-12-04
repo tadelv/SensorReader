@@ -23,40 +23,53 @@ struct ReadingsList: View {
     }
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                List {
-                    ForEach(viewModel.readings) { reading in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(reading.device)
-                                    .font(.headline)
-                                Text(reading.name)
-                            }
-                            Spacer()
-                            Text(reading.value)
-                                .font(.caption)
-                            Text(reading.unit)
-                                .font(.caption)
+        ZStack {
+            List {
+                ForEach(viewModel.readings) { reading in
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(reading.device)
+                                .font(.headline)
+                            Text(reading.name)
                         }
+                        Spacer()
+                        Text(reading.value)
+                            .font(.caption)
+                        Text(reading.unit)
+                            .font(.caption)
                     }
-                }
-                if case .loading = viewModel.state {
-                    Text("Loading")
                 }
             }
-            .toolbar {
-                Button("Refresh") {
-                    Task {
-                        await viewModel.load()
-                    }
+            if case .loading = viewModel.state {
+                VStack {
+                    ProgressView()
+                    Text("Loading")
+                        .background(Color(UIColor.systemBackground))
                 }
+            }
+            if case .error(let err) = viewModel.state {
+                let message = "Failed with: \(err.localizedDescription)"
+                Text(message)
+                    .background(Color(UIColor.systemBackground))
             }
         }
         .onAppear {
-            Task {
-                await viewModel.load()
+            refresh()
+        }
+        .toolbar {
+            Button {
+                refresh()
+            } label: {
+                Image(systemName: "arrow.clockwise")
             }
+
+        }
+        .navigationTitle("List")
+    }
+
+    func refresh() {
+        Task {
+            await viewModel.load()
         }
     }
 }
@@ -121,6 +134,30 @@ struct ReadingsList_Previews: PreviewProvider {
             sleep(1)
             return [
                 MockReading(name: "Temperature",
+                            value: "20",
+                            unit: "C"),
+                MockReading(name: "Temperature1",
+                            value: "21",
+                            unit: "C"),
+                MockReading(name: "Temperature2",
+                            value: "20",
+                            unit: "C"),
+                MockReading(name: "Temperature3",
+                            value: "20",
+                            unit: "C"),
+                MockReading(name: "Temperature4",
+                            value: "20",
+                            unit: "C"),
+                MockReading(name: "Temperature5",
+                            value: "20",
+                            unit: "C"),
+                MockReading(name: "Temperature6",
+                            value: "20",
+                            unit: "C"),
+                MockReading(name: "Temperature7",
+                            value: "20",
+                            unit: "C"),
+                MockReading(name: "Temperature8",
                             value: "20",
                             unit: "C")
             ]

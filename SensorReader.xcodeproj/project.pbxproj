@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18206EF3293CC13A00ED1420 /* SensorReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */; };
-		18206EF5293CC13A00ED1420 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206EF4293CC13A00ED1420 /* ContentView.swift */; };
 		18206EF7293CC13B00ED1420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18206EF6293CC13B00ED1420 /* Assets.xcassets */; };
 		18206EFB293CC13B00ED1420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18206EFA293CC13B00ED1420 /* Preview Assets.xcassets */; };
 		18206F0A293CC17700ED1420 /* SensorReaderKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 18206F09293CC17700ED1420 /* SensorReaderKit.docc */; };
@@ -20,6 +19,8 @@
 		18206F25293CC18600ED1420 /* SensorReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F24293CC18600ED1420 /* SensorReader.swift */; };
 		18206F27293CC22F00ED1420 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 18206F26293CC22F00ED1420 /* data.json */; };
 		18206F2B293CF59600ED1420 /* ReadingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2A293CF59600ED1420 /* ReadingsList.swift */; };
+		18206F2D293D15F500ED1420 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2C293D15F500ED1420 /* HomeView.swift */; };
+		18206F2F293D1E7200ED1420 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2E293D1E7200ED1420 /* DashboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,6 @@
 /* Begin PBXFileReference section */
 		18206EEF293CC13A00ED1420 /* SensorReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorReaderApp.swift; sourceTree = "<group>"; };
-		18206EF4293CC13A00ED1420 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18206EF6293CC13B00ED1420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18206EF8293CC13B00ED1420 /* SensorReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorReader.entitlements; sourceTree = "<group>"; };
 		18206EFA293CC13B00ED1420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -75,6 +75,8 @@
 		18206F24293CC18600ED1420 /* SensorReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorReader.swift; sourceTree = "<group>"; };
 		18206F26293CC22F00ED1420 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		18206F2A293CF59600ED1420 /* ReadingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsList.swift; sourceTree = "<group>"; };
+		18206F2C293D15F500ED1420 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		18206F2E293D1E7200ED1420 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +131,8 @@
 			children = (
 				18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */,
 				18206F2A293CF59600ED1420 /* ReadingsList.swift */,
-				18206EF4293CC13A00ED1420 /* ContentView.swift */,
+				18206F2C293D15F500ED1420 /* HomeView.swift */,
+				18206F2E293D1E7200ED1420 /* DashboardView.swift */,
 				18206EF6293CC13B00ED1420 /* Assets.xcassets */,
 				18206EF8293CC13B00ED1420 /* SensorReader.entitlements */,
 				18206EF9293CC13B00ED1420 /* Preview Content */,
@@ -308,7 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18206EF5293CC13A00ED1420 /* ContentView.swift in Sources */,
+				18206F2D293D15F500ED1420 /* HomeView.swift in Sources */,
+				18206F2F293D1E7200ED1420 /* DashboardView.swift in Sources */,
 				18206F2B293CF59600ED1420 /* ReadingsList.swift in Sources */,
 				18206EF3293CC13A00ED1420 /* SensorReaderApp.swift in Sources */,
 			);

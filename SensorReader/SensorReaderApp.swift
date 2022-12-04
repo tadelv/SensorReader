@@ -10,10 +10,26 @@ import SensorReaderKit
 
 @main
 struct SensorReaderApp: App {
-    let reader = SensorReader(URLSession.shared)
+
+    let reader: SensorReader
+
+    init() {
+        let config = URLSessionConfiguration.ephemeral
+        config.timeoutIntervalForRequest = 5
+        config.timeoutIntervalForResource = 5
+        let session = URLSession(configuration: config)
+        self.reader = SensorReader(session)
+    }
+
     var body: some Scene {
         WindowGroup {
-            ReadingsList(provider: reader)
+            HomeView {
+                NavigationView {
+                    ReadingsList(provider: reader)
+                }.tabItem {
+                    Image(systemName: "list.bullet")
+                }
+            }
         }
     }
 }
