@@ -11,10 +11,11 @@ import Combine
 class ReadingsListViewModel: ObservableObject {
     struct ReadingModel: Identifiable {
         let id: String
+        let device: String
         let name: String
         let value: String
     }
-    
+
     enum State {
         case idle
         case loading
@@ -37,6 +38,7 @@ class ReadingsListViewModel: ObservableObject {
         providerConnection = provider.readings.map({ readings in
             readings.map {
                 ReadingModel(id: $0.id,
+                             device: $0.device,
                              name: $0.name,
                              value: "\($0.value)\($0.unit)")
             }

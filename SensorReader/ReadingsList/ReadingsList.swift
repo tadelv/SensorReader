@@ -22,10 +22,13 @@ struct ReadingsList: View {
             List {
                 ForEach(viewModel.readings) { reading in
                     HStack {
-                        Text(reading.name)
+                        VStack(alignment: .leading) {
+                            Text(reading.name)
+                            Text(reading.device).font(.caption)
+                        }
                         Spacer()
                         Text(reading.value)
-                            .font(.caption)
+                            .font(.callout)
                     }
                 }
             }

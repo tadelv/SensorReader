@@ -99,7 +99,10 @@ extension DashboardView {
                             reading.id == favorite.id
                         }
                     }.map {
-                        ReadingsListViewModel.ReadingModel(id: $0.id, name: $0.name, value: "\($0.value)\($0.unit)")
+                        ReadingsListViewModel.ReadingModel(id: $0.id,
+                                                           device: $0.sensorClass,
+                                                           name: $0.name,
+                                                           value: "\($0.value)\($0.unit)")
                     }
                 }.store(in: &cancellables)
         }
@@ -156,7 +159,10 @@ struct DashboardView_Previews: PreviewProvider {
 
         init() {
             let mock = ReadingsList_Previews.MockProvider().mockReadings.value.first!
-            let model = ReadingsListViewModel.ReadingModel(id: mock.id, name: mock.name, value: "\(mock.value)\(mock.unit)")
+            let model = ReadingsListViewModel.ReadingModel(id: mock.id,
+                                                           device: mock.device,
+                                                           name: mock.name,
+                                                           value: "\(mock.value)\(mock.unit)")
             favorites = CurrentValueSubject([
                 .init(id: model.id)
             ])
