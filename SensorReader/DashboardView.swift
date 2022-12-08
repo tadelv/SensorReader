@@ -36,12 +36,8 @@ struct DashboardView: View {
             LazyVGrid(columns: columns) {
                 ForEach(viewModel.favoriteReadings) { reading in
                     VStack {
-                        HStack {
-                            Text(reading.value)
-                                .font(.title)
-                            Text(reading.unit)
-                                .font(.title)
-                        }
+                        Text(reading.value)
+                            .font(.title)
                         Text(reading.name)
                             .font(.title2)
                     }
@@ -70,7 +66,7 @@ extension DashboardView {
 
         private var cancellables = Set<AnyCancellable>()
 
-        @Published var favoriteReadings: [ReadingsList.ReadingModel] = []
+        @Published var favoriteReadings: [ReadingsListViewModel.ReadingModel] = []
 
         init(SensorReadingsProvider: any SensorReadingsProvider,
              favoritesProvider: any FavoritesProvider) {
@@ -102,19 +98,65 @@ extension DashboardView {
                         favorites.contains { favorite in
                             reading.id == favorite.id
                         }
-                    }.map(ReadingsList.ReadingModel.init(from:))
+                    }.map {
+                        ReadingsListViewModel.ReadingModel(id: $0.id, name: $0.name, value: "\($0.value)\($0.unit)")
+                    }
                 }.store(in: &cancellables)
         }
     }
 }
 
 struct DashboardView_Previews: PreviewProvider {
+    struct MockProvider: SensorReadingsProvider {
+        struct MockReading: SensorReading {
+            var sensorClass: String { "Class" }
+            var name: String
+            var value: String
+            var unit: String
+            var updateTime: Date { Date() }
+        }
+
+        var mockReadings: [MockReading] = [
+            MockReading(name: "Temperature",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature1",
+                        value: "21",
+                        unit: "C"),
+            MockReading(name: "Temperature2",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature3",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature4",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature5",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature6",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature7",
+                        value: "20",
+                        unit: "C"),
+            MockReading(name: "Temperature8",
+                        value: "20",
+                        unit: "C")
+        ]
+
+        func readings() async throws -> [MockReading] {
+            return mockReadings
+        }
+    }
+
     struct MockFavoriteProvider: FavoritesProvider {
         let favorites: CurrentValueSubject<[FavoriteModel], Error>
 
         init() {
-            let mock = ReadingsList_Previews.MockProvider().mockReadings.first!
-            let model = ReadingsList.ReadingModel(from: mock)
+            let mock = ReadingsList_Previews.MockProvider().mockReadings.value.first!
+            let model = ReadingsListViewModel.ReadingModel(id: mock.id, name: mock.name, value: "\(mock.value)\(mock.unit)")
             favorites = CurrentValueSubject([
                 .init(id: model.id)
             ])
@@ -122,7 +164,7 @@ struct DashboardView_Previews: PreviewProvider {
     }
     static var previews: some View {
         DashboardView(
-            SensorReadingsProvider: ReadingsList_Previews.MockProvider(),
+            SensorReadingsProvider: MockProvider(),
             favoritesProvider: MockFavoriteProvider()
         )
     }

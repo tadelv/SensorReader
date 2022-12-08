@@ -5,15 +5,16 @@
 //  Created by Vid Tadel on 12/4/22.
 //
 
+import Combine
 import SwiftUI
 import SensorReaderKit
 
 
 struct ReadingsList: View {
-    @ObservedObject private var viewModel: ViewModel
+    @ObservedObject private var viewModel: ReadingsListViewModel
 
-    init(provider: any SensorReadingsProvider) {
-        _viewModel = ObservedObject(initialValue: ViewModel(provider: provider))
+    init(viewModel: ReadingsListViewModel) {
+        _viewModel = ObservedObject(initialValue: viewModel)
     }
 
     var body: some View {
@@ -21,15 +22,9 @@ struct ReadingsList: View {
             List {
                 ForEach(viewModel.readings) { reading in
                     HStack {
-                        VStack(alignment: .leading) {
-                            Text(reading.device)
-                                .font(.headline)
-                            Text(reading.name)
-                        }
+                        Text(reading.name)
                         Spacer()
                         Text(reading.value)
-                            .font(.caption)
-                        Text(reading.unit)
                             .font(.caption)
                     }
                 }
@@ -69,65 +64,33 @@ struct ReadingsList: View {
 }
 
 extension ReadingsList {
-    struct ReadingModel: Identifiable {
-        var id: String {
-            device + name + unit
-        }
-        let device: String
-        let name: String
-        let value: String
-        let unit: String
 
-        init(from reading: SensorReading) {
-            self.device = reading.sensorClass
-            self.name = reading.name
-            self.value = reading.value
-            self.unit = reading.unit
-        }
-    }
-
-    @MainActor
-    class ViewModel: ObservableObject {
-        enum State {
-            case idle
-            case loading
-            case error(Error)
-        }
-
-        @Published var state: State = .idle
-
-        @Published var readings: [ReadingModel] = []
-
-        let provider: any SensorReadingsProvider
-
-        init(provider: any SensorReadingsProvider) {
-            self.provider = provider
-        }
-
-        func load() async {
-            state = .loading
-            do {
-                let data = try await provider.readings()
-                readings = data.map(ReadingModel.init(from:))
-                state = .idle
-            } catch {
-                state = .error(error)
-            }
-        }
-    }
 }
 
 struct ReadingsList_Previews: PreviewProvider {
-    struct MockProvider: SensorReadingsProvider {
-        struct MockReading: SensorReading {
-            var sensorClass: String { "Class" }
-            var name: String
-            var value: String
-            var unit: String
-            var updateTime: Date { Date() }
+    struct MockProvider: ReadingProviding {
+        var readings: AnyPublisher<[any Reading], Error> {
+            mockReadings
+                .eraseToAnyPublisher()
         }
 
-        var mockReadings: [MockReading] = [
+        struct MockReading: Reading {
+            var device: String { "Mock Reading" }
+
+            var name: String
+
+            var value: String
+
+            var unit: String
+
+            var id: String {
+                device + name + unit
+            }
+
+
+        }
+
+        var mockReadings: CurrentValueSubject<[any Reading], Error> = .init([
             MockReading(name: "Temperature",
                         value: "20",
                         unit: "C"),
@@ -155,13 +118,9 @@ struct ReadingsList_Previews: PreviewProvider {
             MockReading(name: "Temperature8",
                         value: "20",
                         unit: "C")
-        ]
-
-        func readings() async throws -> [MockReading] {
-            return mockReadings
-        }
+        ])
     }
     static var previews: some View {
-        ReadingsList(provider: MockProvider())
+        ReadingsList(viewModel: ReadingsListViewModel(provider: MockProvider()))
     }
 }

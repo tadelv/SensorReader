@@ -12,6 +12,7 @@ import SensorReaderKit
 struct SensorReaderApp: App {
 
     let reader: SensorReader
+    let useCase: ReadingsUseCase
 
     init() {
         let config = URLSessionConfiguration.ephemeral
@@ -19,13 +20,14 @@ struct SensorReaderApp: App {
         config.timeoutIntervalForResource = 5
         let session = URLSession(configuration: config)
         self.reader = SensorReader(session)
+        self.useCase = ReadingsUseCase(reader: reader)
     }
 
     var body: some Scene {
         WindowGroup {
             HomeView {
                 NavigationView {
-                    ReadingsList(provider: reader)
+                    ReadingsList(viewModel: ReadingsListViewModel(provider: useCase))
                 }.tabItem {
                     Image(systemName: "list.bullet")
                 }

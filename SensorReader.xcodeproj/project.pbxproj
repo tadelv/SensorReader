@@ -22,6 +22,7 @@
 		18206F2D293D15F500ED1420 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2C293D15F500ED1420 /* HomeView.swift */; };
 		18206F2F293D1E7200ED1420 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2E293D1E7200ED1420 /* DashboardView.swift */; };
 		187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C90294259AC00F585B1 /* ReadingProviding.swift */; };
+		187F4C9429425E3D00F585B1 /* ReadingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */; };
 		18C1F8B62942420400ACCF4B /* ReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */; };
 		18C1F8C529424B2300ACCF4B /* ReadingsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */; };
 		18C1F8C829424B5200ACCF4B /* MockSensorReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8C729424B5200ACCF4B /* MockSensorReader.swift */; };
@@ -89,6 +90,7 @@
 		18206F2C293D15F500ED1420 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		18206F2E293D1E7200ED1420 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		187F4C90294259AC00F585B1 /* ReadingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingProviding.swift; sourceTree = "<group>"; };
+		187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsListViewModel.swift; sourceTree = "<group>"; };
 		18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsUseCase.swift; sourceTree = "<group>"; };
 		18C1F8BB29424B0100ACCF4B /* SensorReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsUseCaseTests.swift; sourceTree = "<group>"; };
@@ -156,7 +158,7 @@
 			children = (
 				18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */,
 				18C1F8B4294241B500ACCF4B /* ReadingsStore */,
-				18206F2A293CF59600ED1420 /* ReadingsList.swift */,
+				187F4C9229425E1E00F585B1 /* ReadingsList */,
 				18206F2C293D15F500ED1420 /* HomeView.swift */,
 				18206F2E293D1E7200ED1420 /* DashboardView.swift */,
 				18206EF6293CC13B00ED1420 /* Assets.xcassets */,
@@ -191,6 +193,15 @@
 				18206F26293CC22F00ED1420 /* data.json */,
 			);
 			path = SensorReaderKitTests;
+			sourceTree = "<group>";
+		};
+		187F4C9229425E1E00F585B1 /* ReadingsList */ = {
+			isa = PBXGroup;
+			children = (
+				18206F2A293CF59600ED1420 /* ReadingsList.swift */,
+				187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */,
+			);
+			path = ReadingsList;
 			sourceTree = "<group>";
 		};
 		18C1F8B4294241B500ACCF4B /* ReadingsStore */ = {
@@ -395,6 +406,7 @@
 			files = (
 				18206F2D293D15F500ED1420 /* HomeView.swift in Sources */,
 				187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */,
+				187F4C9429425E3D00F585B1 /* ReadingsListViewModel.swift in Sources */,
 				18C1F8B62942420400ACCF4B /* ReadingsUseCase.swift in Sources */,
 				18206F2F293D1E7200ED1420 /* DashboardView.swift in Sources */,
 				18206F2B293CF59600ED1420 /* ReadingsList.swift in Sources */,
