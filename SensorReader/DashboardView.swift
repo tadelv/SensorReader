@@ -25,9 +25,9 @@ struct DashboardView: View {
         GridItem(.flexible())
     ]
 
-    init(readingsProvider: any ReadingsProvider,
+    init(SensorReadingsProvider: any SensorReadingsProvider,
          favoritesProvider: any FavoritesProvider) {
-        _viewModel = ObservedObject(initialValue: ViewModel(readingsProvider: readingsProvider,
+        _viewModel = ObservedObject(initialValue: ViewModel(SensorReadingsProvider: SensorReadingsProvider,
                                                             favoritesProvider: favoritesProvider))
     }
 
@@ -65,16 +65,16 @@ extension SensorReading {
 
 extension DashboardView {
     class ViewModel: ObservableObject {
-        let readingsProvider: any ReadingsProvider
+        let SensorReadingsProvider: any SensorReadingsProvider
         let favoritesProvider: any FavoritesProvider
 
         private var cancellables = Set<AnyCancellable>()
 
         @Published var favoriteReadings: [ReadingsList.ReadingModel] = []
 
-        init(readingsProvider: any ReadingsProvider,
+        init(SensorReadingsProvider: any SensorReadingsProvider,
              favoritesProvider: any FavoritesProvider) {
-            self.readingsProvider = readingsProvider
+            self.SensorReadingsProvider = SensorReadingsProvider
             self.favoritesProvider = favoritesProvider
             Task {
                 await load()
@@ -83,10 +83,10 @@ extension DashboardView {
 
         @MainActor
         func load() async {
-            let readings = Future<[any SensorReading], Error> { [readingsProvider] promise in
+            let readings = Future<[any SensorReading], Error> { [SensorReadingsProvider] promise in
                 Task {
                     do {
-                        let readings = try await readingsProvider.readings()
+                        let readings = try await SensorReadingsProvider.readings()
                         promise(.success(readings))
                     } catch {
                         promise(.failure(error))
@@ -122,7 +122,7 @@ struct DashboardView_Previews: PreviewProvider {
     }
     static var previews: some View {
         DashboardView(
-            readingsProvider: ReadingsList_Previews.MockProvider(),
+            SensorReadingsProvider: ReadingsList_Previews.MockProvider(),
             favoritesProvider: MockFavoriteProvider()
         )
     }

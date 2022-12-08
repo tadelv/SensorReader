@@ -28,7 +28,7 @@ final class SensorReaderKitTests: XCTestCase {
         let data = try NSData(contentsOfFile: filePath) as Data
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        let readings = try decoder.decode([SensorReading].self, from: data)
+        let readings = try decoder.decode([SensorReadingImpl].self, from: data)
         XCTAssert(readings.isEmpty == false)
     }
 

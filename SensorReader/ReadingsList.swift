@@ -8,17 +8,11 @@
 import SwiftUI
 import SensorReaderKit
 
-protocol ReadingsProvider {
-    associatedtype Reading: SensorReading
-    func readings() async throws -> [Reading]
-}
-
-extension SensorReader: ReadingsProvider {}
 
 struct ReadingsList: View {
     @ObservedObject private var viewModel: ViewModel
 
-    init(provider: any ReadingsProvider) {
+    init(provider: any SensorReadingsProvider) {
         _viewModel = ObservedObject(initialValue: ViewModel(provider: provider))
     }
 
@@ -104,9 +98,9 @@ extension ReadingsList {
 
         @Published var readings: [ReadingModel] = []
 
-        let provider: any ReadingsProvider
+        let provider: any SensorReadingsProvider
 
-        init(provider: any ReadingsProvider) {
+        init(provider: any SensorReadingsProvider) {
             self.provider = provider
         }
 
@@ -124,7 +118,7 @@ extension ReadingsList {
 }
 
 struct ReadingsList_Previews: PreviewProvider {
-    struct MockProvider: ReadingsProvider {
+    struct MockProvider: SensorReadingsProvider {
         struct MockReading: SensorReading {
             var sensorClass: String { "Class" }
             var name: String
