@@ -180,6 +180,7 @@
 		18206EF9293CC13B00ED1420 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				1837EBFD29436BA00045CC4E /* Preview+Mocks.swift */,
 				18206EFA293CC13B00ED1420 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -216,7 +217,6 @@
 		1837EBFC29436B920045CC4E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1837EBFD29436BA00045CC4E /* Preview+Mocks.swift */,
 				1837EBFF29439DD30045CC4E /* ViewModelState.swift */,
 				1837EC0129439E1A0045CC4E /* ReadingModel.swift */,
 			);
