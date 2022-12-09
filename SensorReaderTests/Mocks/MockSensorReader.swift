@@ -18,6 +18,10 @@ class MockProvider: SensorReadingsProvider {
         var updateTime: Date { Date() }
     }
 
+    lazy var readingsResult: () throws -> [MockReading] = {
+        self.mockReadings
+    }
+
     private(set) var callCount = 0
 
     var mockReadings: [MockReading] = [
@@ -52,6 +56,6 @@ class MockProvider: SensorReadingsProvider {
 
     func readings() async throws -> [MockReading] {
         callCount += 1
-        return mockReadings
+        return try readingsResult()
     }
 }

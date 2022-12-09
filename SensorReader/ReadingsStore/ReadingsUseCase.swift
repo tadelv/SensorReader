@@ -63,9 +63,16 @@ final class ReadingsUseCase: ReadingProviding {
             }
             do {
                 let readings = try await self.reader.readings().map(ReadingImpl.init(from:))
-                self.readingsSubject.send(readings)
+                await MainActor.run {
+                    self.readingsSubject.send(readings)
+                }
             } catch {
-                self.readingsSubject.send(completion: .failure(error))
+                timer?.invalidate()
+                timer = nil
+                self.subjects = []
+                await MainActor.run {
+                    self.readingsSubject.send(completion: .failure(error))
+                }
             }
         }
     }
