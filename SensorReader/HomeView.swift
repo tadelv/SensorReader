@@ -22,7 +22,11 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView {
             NavigationView {
-                ReadingsList(viewModel: ReadingsListViewModel(provider: MockProvider()))
+                ReadingsList(
+                    viewModel: ReadingsListViewModel(
+                        provider: Self.mockReadingsProvider
+                    )
+                )
             }
             .navigationViewStyle(.stack)
             .tabItem {

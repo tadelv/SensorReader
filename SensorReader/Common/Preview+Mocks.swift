@@ -9,25 +9,19 @@ import Combine
 import SwiftUI
 
 struct MockProvider: ReadingProviding {
-    var readings: AnyPublisher<[any Reading], Error> {
-        mockReadings
-            .eraseToAnyPublisher()
-    }
-
     struct MockReading: Reading {
-        var device: String { "Mock Reading" }
-
-        var name: String
-
-        var value: String
-
-        var unit: String
-
         var id: String {
             device + name + unit
         }
+        var device: String { "Mock Reading" }
+        var name: String
+        var value: String
+        var unit: String
+    }
 
-
+    var readings: AnyPublisher<[any Reading], Error> {
+        mockReadings
+            .eraseToAnyPublisher()
     }
 
     var mockReadings: CurrentValueSubject<[any Reading], Error> = .init([
@@ -59,10 +53,31 @@ struct MockProvider: ReadingProviding {
                     value: "20",
                     unit: "C")
     ])
+
+    fileprivate init() {}
+}
+
+struct MockFavoriteProvider: FavoritesProviding {
+    let favorites: CurrentValueSubject<[FavoriteModel], Error>
+
+    fileprivate init() {
+        let mock = MockProvider().mockReadings.value.first!
+        let model = ReadingModel(id: mock.id,
+                                 device: mock.device,
+                                 name: mock.name,
+                                 value: "\(mock.value)\(mock.unit)")
+        favorites = CurrentValueSubject([
+            .init(id: model.id)
+        ])
+    }
 }
 
 extension PreviewProvider {
     static var mockReadingsProvider: ReadingProviding {
         MockProvider()
+    }
+
+    static var mockFavoritesProvider: FavoritesProviding {
+        MockFavoriteProvider()
     }
 }

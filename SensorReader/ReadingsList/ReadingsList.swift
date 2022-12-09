@@ -68,6 +68,8 @@ struct ReadingsList: View {
 
 struct ReadingsList_Previews: PreviewProvider {
     static var previews: some View {
-        ReadingsList(viewModel: ReadingsListViewModel(provider: MockProvider()))
+        ReadingsList(
+            viewModel: ReadingsListViewModel(provider: Self.mockReadingsProvider)
+        )
     }
 }

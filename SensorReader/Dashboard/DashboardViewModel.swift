@@ -9,14 +9,14 @@ import Combine
 
 class DashboardViewModel: ObservableObject {
     let readingsProvider: any ReadingProviding
-    let favoritesProvider: any FavoritesProvider
+    let favoritesProvider: any FavoritesProviding
 
     private var cancellables = Set<AnyCancellable>()
 
     @Published var favoriteReadings: [ReadingModel] = []
 
     init(readingsProvider: any ReadingProviding,
-         favoritesProvider: any FavoritesProvider) {
+         favoritesProvider: any FavoritesProviding) {
         self.readingsProvider = readingsProvider
         self.favoritesProvider = favoritesProvider
         Task {

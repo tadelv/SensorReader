@@ -13,7 +13,7 @@ struct FavoriteModel {
     let id: String
 }
 
-protocol FavoritesProvider {
+protocol FavoritesProviding {
     var favorites: CurrentValueSubject<[FavoriteModel], Error> { get }
 }
 
@@ -52,22 +52,11 @@ struct DashboardView: View {
 }
 
 struct DashboardView_Previews: PreviewProvider {
-    struct MockFavoriteProvider: FavoritesProvider {
-        let favorites: CurrentValueSubject<[FavoriteModel], Error>
-
-        init() {
-            let mock = MockProvider().mockReadings.value.first!
-            let model = ReadingModel(id: mock.id,
-                                     device: mock.device,
-                                     name: mock.name,
-                                     value: "\(mock.value)\(mock.unit)")
-            favorites = CurrentValueSubject([
-                .init(id: model.id)
-            ])
-        }
-    }
     static var previews: some View {
-        DashboardView(viewModel: DashboardViewModel(readingsProvider: MockProvider(), favoritesProvider: MockFavoriteProvider())
+        DashboardView(
+            viewModel: DashboardViewModel(
+                readingsProvider: Self.mockReadingsProvider,
+                favoritesProvider: Self.mockFavoritesProvider)
         )
     }
 }
