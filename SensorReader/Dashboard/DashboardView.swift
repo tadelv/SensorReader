@@ -57,10 +57,10 @@ struct DashboardView_Previews: PreviewProvider {
 
         init() {
             let mock = MockProvider().mockReadings.value.first!
-            let model = ReadingsListViewModel.ReadingModel(id: mock.id,
-                                                           device: mock.device,
-                                                           name: mock.name,
-                                                           value: "\(mock.value)\(mock.unit)")
+            let model = ReadingModel(id: mock.id,
+                                     device: mock.device,
+                                     name: mock.name,
+                                     value: "\(mock.value)\(mock.unit)")
             favorites = CurrentValueSubject([
                 .init(id: model.id)
             ])

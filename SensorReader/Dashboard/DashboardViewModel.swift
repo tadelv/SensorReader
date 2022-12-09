@@ -13,7 +13,7 @@ class DashboardViewModel: ObservableObject {
 
     private var cancellables = Set<AnyCancellable>()
 
-    @Published var favoriteReadings: [ReadingsListViewModel.ReadingModel] = []
+    @Published var favoriteReadings: [ReadingModel] = []
 
     init(readingsProvider: any ReadingProviding,
          favoritesProvider: any FavoritesProvider) {
@@ -38,10 +38,10 @@ class DashboardViewModel: ObservableObject {
                         reading.id == favorite.id
                     }
                 }.map {
-                    ReadingsListViewModel.ReadingModel(id: $0.id,
-                                                       device: $0.device,
-                                                       name: $0.name,
-                                                       value: "\($0.value)\($0.unit)")
+                    ReadingModel(id: $0.id,
+                                 device: $0.device,
+                                 name: $0.name,
+                                 value: "\($0.value)\($0.unit)")
                 }
             }.store(in: &cancellables)
     }

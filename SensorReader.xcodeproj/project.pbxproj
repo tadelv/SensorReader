@@ -23,6 +23,8 @@
 		18206F2F293D1E7200ED1420 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2E293D1E7200ED1420 /* DashboardView.swift */; };
 		1837EBFB294369BD0045CC4E /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EBFA294369BD0045CC4E /* DashboardViewModel.swift */; };
 		1837EBFE29436BA00045CC4E /* Preview+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EBFD29436BA00045CC4E /* Preview+Mocks.swift */; };
+		1837EC0029439DD30045CC4E /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EBFF29439DD30045CC4E /* ViewModelState.swift */; };
+		1837EC0229439E1A0045CC4E /* ReadingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC0129439E1A0045CC4E /* ReadingModel.swift */; };
 		187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C90294259AC00F585B1 /* ReadingProviding.swift */; };
 		187F4C9429425E3D00F585B1 /* ReadingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */; };
 		18C1F8B62942420400ACCF4B /* ReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */; };
@@ -93,6 +95,8 @@
 		18206F2E293D1E7200ED1420 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		1837EBFA294369BD0045CC4E /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		1837EBFD29436BA00045CC4E /* Preview+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview+Mocks.swift"; sourceTree = "<group>"; };
+		1837EBFF29439DD30045CC4E /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		1837EC0129439E1A0045CC4E /* ReadingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingModel.swift; sourceTree = "<group>"; };
 		187F4C90294259AC00F585B1 /* ReadingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingProviding.swift; sourceTree = "<group>"; };
 		187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsListViewModel.swift; sourceTree = "<group>"; };
 		18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsUseCase.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				1837EBFD29436BA00045CC4E /* Preview+Mocks.swift */,
+				1837EBFF29439DD30045CC4E /* ViewModelState.swift */,
+				1837EC0129439E1A0045CC4E /* ReadingModel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -426,6 +432,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1837EC0029439DD30045CC4E /* ViewModelState.swift in Sources */,
+				1837EC0229439E1A0045CC4E /* ReadingModel.swift in Sources */,
 				18206F2D293D15F500ED1420 /* HomeView.swift in Sources */,
 				187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */,
 				187F4C9429425E3D00F585B1 /* ReadingsListViewModel.swift in Sources */,

@@ -9,20 +9,7 @@ import Combine
 
 @MainActor
 class ReadingsListViewModel: ObservableObject {
-    struct ReadingModel: Identifiable {
-        let id: String
-        let device: String
-        let name: String
-        let value: String
-    }
-
-    enum State {
-        case idle
-        case loading
-        case error(Error)
-    }
-
-    @Published var state: State = .idle
+    @Published var state: ViewModelState = .idle
     @Published var readings: [ReadingModel] = []
 
     private var providerConnection: AnyCancellable?
