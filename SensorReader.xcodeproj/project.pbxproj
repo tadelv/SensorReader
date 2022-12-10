@@ -25,6 +25,9 @@
 		1837EBFE29436BA00045CC4E /* Preview+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EBFD29436BA00045CC4E /* Preview+Mocks.swift */; };
 		1837EC0029439DD30045CC4E /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EBFF29439DD30045CC4E /* ViewModelState.swift */; };
 		1837EC0229439E1A0045CC4E /* ReadingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC0129439E1A0045CC4E /* ReadingModel.swift */; };
+		1837EC05294461110045CC4E /* FavoritesProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC04294461110045CC4E /* FavoritesProviding.swift */; };
+		1837EC09294461850045CC4E /* FavoritesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC08294461850045CC4E /* FavoritesUseCaseTests.swift */; };
+		1837EC0B294465670045CC4E /* MockPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC0A294465670045CC4E /* MockPersistenceStore.swift */; };
 		187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C90294259AC00F585B1 /* ReadingProviding.swift */; };
 		187F4C9429425E3D00F585B1 /* ReadingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */; };
 		18C1F8B62942420400ACCF4B /* ReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */; };
@@ -97,6 +100,9 @@
 		1837EBFD29436BA00045CC4E /* Preview+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview+Mocks.swift"; sourceTree = "<group>"; };
 		1837EBFF29439DD30045CC4E /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
 		1837EC0129439E1A0045CC4E /* ReadingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingModel.swift; sourceTree = "<group>"; };
+		1837EC04294461110045CC4E /* FavoritesProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProviding.swift; sourceTree = "<group>"; };
+		1837EC08294461850045CC4E /* FavoritesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUseCaseTests.swift; sourceTree = "<group>"; };
+		1837EC0A294465670045CC4E /* MockPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistenceStore.swift; sourceTree = "<group>"; };
 		187F4C90294259AC00F585B1 /* ReadingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingProviding.swift; sourceTree = "<group>"; };
 		187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsListViewModel.swift; sourceTree = "<group>"; };
 		18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsUseCase.swift; sourceTree = "<group>"; };
@@ -142,11 +148,11 @@
 		18206EE6293CC13A00ED1420 = {
 			isa = PBXGroup;
 			children = (
+				18206EF0293CC13A00ED1420 /* Products */,
 				18206EF1293CC13A00ED1420 /* SensorReader */,
 				18206F07293CC17700ED1420 /* SensorReaderKit */,
 				18206F15293CC17700ED1420 /* SensorReaderKitTests */,
 				18C1F8BC29424B0100ACCF4B /* SensorReaderTests */,
-				18206EF0293CC13A00ED1420 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,15 +170,16 @@
 		18206EF1293CC13A00ED1420 /* SensorReader */ = {
 			isa = PBXGroup;
 			children = (
-				18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */,
-				1837EBFC29436B920045CC4E /* Common */,
-				18C1F8B4294241B500ACCF4B /* ReadingsStore */,
-				187F4C9229425E1E00F585B1 /* ReadingsList */,
-				18206F2C293D15F500ED1420 /* HomeView.swift */,
-				1837EBF9294369AA0045CC4E /* Dashboard */,
+				1837EC032943A3370045CC4E /* FavoritesStore */,
 				18206EF6293CC13B00ED1420 /* Assets.xcassets */,
-				18206EF8293CC13B00ED1420 /* SensorReader.entitlements */,
+				1837EBFC29436B920045CC4E /* Common */,
+				1837EBF9294369AA0045CC4E /* Dashboard */,
+				18206F2C293D15F500ED1420 /* HomeView.swift */,
 				18206EF9293CC13B00ED1420 /* Preview Content */,
+				187F4C9229425E1E00F585B1 /* ReadingsList */,
+				18C1F8B4294241B500ACCF4B /* ReadingsStore */,
+				18206EF8293CC13B00ED1420 /* SensorReader.entitlements */,
+				18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */,
 			);
 			path = SensorReader;
 			sourceTree = "<group>";
@@ -223,6 +230,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		1837EC032943A3370045CC4E /* FavoritesStore */ = {
+			isa = PBXGroup;
+			children = (
+				1837EC04294461110045CC4E /* FavoritesProviding.swift */,
+			);
+			path = FavoritesStore;
+			sourceTree = "<group>";
+		};
 		187F4C9229425E1E00F585B1 /* ReadingsList */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */,
+				1837EC08294461850045CC4E /* FavoritesUseCaseTests.swift */,
 				18C1F8C629424B4000ACCF4B /* Mocks */,
 			);
 			path = SensorReaderTests;
@@ -254,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				18C1F8C729424B5200ACCF4B /* MockSensorReader.swift */,
+				1837EC0A294465670045CC4E /* MockPersistenceStore.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -440,6 +457,7 @@
 				18C1F8B62942420400ACCF4B /* ReadingsUseCase.swift in Sources */,
 				18206F2F293D1E7200ED1420 /* DashboardView.swift in Sources */,
 				18206F2B293CF59600ED1420 /* ReadingsList.swift in Sources */,
+				1837EC05294461110045CC4E /* FavoritesProviding.swift in Sources */,
 				18206EF3293CC13A00ED1420 /* SensorReaderApp.swift in Sources */,
 				1837EBFB294369BD0045CC4E /* DashboardViewModel.swift in Sources */,
 				1837EBFE29436BA00045CC4E /* Preview+Mocks.swift in Sources */,
@@ -468,7 +486,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C1F8C829424B5200ACCF4B /* MockSensorReader.swift in Sources */,
+				1837EC0B294465670045CC4E /* MockPersistenceStore.swift in Sources */,
 				18C1F8C529424B2300ACCF4B /* ReadingsUseCaseTests.swift in Sources */,
+				1837EC09294461850045CC4E /* FavoritesUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

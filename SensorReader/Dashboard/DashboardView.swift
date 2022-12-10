@@ -9,14 +9,6 @@ import Combine
 import SensorReaderKit
 import SwiftUI
 
-struct FavoriteModel {
-    let id: String
-}
-
-protocol FavoritesProviding {
-    var favorites: CurrentValueSubject<[FavoriteModel], Error> { get }
-}
-
 struct DashboardView: View {
     @ObservedObject private var viewModel: DashboardViewModel
 
