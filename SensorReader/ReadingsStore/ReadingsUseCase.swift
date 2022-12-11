@@ -20,11 +20,11 @@ extension SensorReader: SensorReadingsProvider {}
 final class ReadingsUseCase: ReadingProviding {
     private let reader: any SensorReadingsProvider
     private let refreshInterval: Double
-    private let readingsSubject = PassthroughSubject<[any Reading], Error>()
+    private var readingsSubject = PassthroughSubject<[any Reading], Error>()
     private var subjects: [any Subscription] = []
     private var timer: Timer?
 
-    lazy var readings: AnyPublisher<[any Reading], Error> = {
+    lazy private(set) var readings: AnyPublisher<[any Reading], Error> = {
         readingsSubject.handleEvents(receiveSubscription: { [unowned self] sub in
             self.subscriptionReceived(sub)
         }, receiveCancel: { [unowned self] in
@@ -51,8 +51,7 @@ final class ReadingsUseCase: ReadingProviding {
     private func subscriptionRemoved() {
         _ = subjects.popLast()
         if subjects.isEmpty {
-            timer?.invalidate()
-            timer = nil
+            stopTimer()
         }
     }
 
@@ -62,19 +61,36 @@ final class ReadingsUseCase: ReadingProviding {
                 return
             }
             do {
-                let readings = try await self.reader.readings().map(ReadingImpl.init(from:))
+                let readings = try await self.reader
+                    .readings()
+                    .map(ReadingImpl.init(from:))
                 await MainActor.run {
                     self.readingsSubject.send(readings)
                 }
             } catch {
-                timer?.invalidate()
-                timer = nil
+                stopTimer()
                 self.subjects = []
                 await MainActor.run {
                     self.readingsSubject.send(completion: .failure(error))
+                    self.resetPublisher()
                 }
             }
         }
+    }
+
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+
+    private func resetPublisher() {
+        readingsSubject = .init()
+        readings = readingsSubject.handleEvents(receiveSubscription: { [unowned self] sub in
+            self.subscriptionReceived(sub)
+        }, receiveCancel: { [unowned self] in
+            self.subscriptionRemoved()
+        })
+        .eraseToAnyPublisher()
     }
 }
 

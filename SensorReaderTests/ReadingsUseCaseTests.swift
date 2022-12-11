@@ -10,6 +10,9 @@ import Combine
 import XCTest
 
 final class ReadingsUseCaseTests: XCTestCase {
+    enum TestError: Error {
+        case test
+    }
 
     var useCase: ReadingsUseCase!
     var mockProvider: MockProvider!
@@ -75,9 +78,6 @@ final class ReadingsUseCaseTests: XCTestCase {
     }
 
     func test_stopsTimerOnError() {
-        enum TestError: Error {
-            case test
-        }
         mockProvider.readingsResult = {
             throw TestError.test
         }
@@ -123,5 +123,44 @@ final class ReadingsUseCaseTests: XCTestCase {
 
         waitForExpectations(timeout: 0.1)
         XCTAssertEqual(mockProvider.callCount, 2)
+    }
+
+    func test_reloadsIfFetchFailsOnceAndResubscribed() {
+        mockProvider.readingsResult = {
+            throw TestError.test
+        }
+        let exp = expectation(description: "fails once")
+        let cancellable = useCase.readings.sink {
+            guard case .failure(let error) = $0,
+            let err = error as? TestError else {
+                XCTFail("invalid completion: \($0)")
+                return
+            }
+            XCTAssertEqual(err, TestError.test)
+            exp.fulfill()
+        } receiveValue: {
+            XCTFail("unexpected value: \($0)")
+        }
+        waitForExpectations(timeout: 0.1)
+
+        mockProvider.readingsResult = {
+            [.init(name: "a", value: "1", unit: "1")]
+        }
+
+        let exp2 = expectation(description: "receives value")
+        let cancellable2 = useCase.readings.sink {
+            XCTFail("unexpected completion: \($0)")
+        } receiveValue: {
+            guard let element = $0.first else {
+                XCTFail("elements should not be empty: \($0)")
+                return
+            }
+            XCTAssertEqual(element.name, "a")
+            XCTAssertEqual(element.value, "1")
+            XCTAssertEqual(element.unit, "1")
+            exp2.fulfill()
+        }
+        waitForExpectations(timeout: 0.1)
+        withExtendedLifetime([cancellable, cancellable2]) {}
     }
 }
