@@ -58,7 +58,11 @@ struct MockProvider: ReadingProviding {
 }
 
 struct MockFavoriteProvider: FavoritesProviding {
-    let favorites: CurrentValueSubject<[FavoriteModel], Error>
+    let favoritesSubject: CurrentValueSubject<[FavoriteModel], Error>
+
+    var favorites: AnyPublisher<[FavoriteModel], Error> {
+        favoritesSubject.eraseToAnyPublisher()
+    }
 
     fileprivate init() {
         let mock = MockProvider().mockReadings.value.first!
@@ -66,9 +70,24 @@ struct MockFavoriteProvider: FavoritesProviding {
                                  device: mock.device,
                                  name: mock.name,
                                  value: "\(mock.value)\(mock.unit)")
-        favorites = CurrentValueSubject([
+        favoritesSubject = CurrentValueSubject([
             .init(id: model.id)
         ])
+    }
+
+    var addCall: (MockFavoriteProvider, FavoriteModel) throws -> Void = {
+        $0.favoritesSubject.send($0.favoritesSubject.value + [$1])
+    }
+
+    func add(_ favorite: FavoriteModel) async throws {
+        try addCall(self, favorite)
+    }
+
+    var removeCall: (MockFavoriteProvider, FavoriteModel) throws -> Void = { _, _ in
+
+    }
+    func remove(_ favorite: FavoriteModel) async throws {
+
     }
 }
 
