@@ -41,12 +41,18 @@ final class FavoritesUseCase<P: PersistenceProviding>: FavoritesProviding where 
             } catch {
                 self?.favoritesSubject
                     .send(completion: .failure(error))
+                self?.resetSubject()
             }
         }
     }
 
     private func resetSubject() {
-        
+        favoritesSubject = CurrentValueSubject([])
+        favorites = favoritesSubject
+            .handleEvents(receiveSubscription: { [unowned self] _ in
+                self.refresh()
+            })
+            .eraseToAnyPublisher()
     }
 
     func add(_ favorite: FavoriteModel) async throws {
