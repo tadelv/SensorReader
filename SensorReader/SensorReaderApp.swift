@@ -10,6 +10,9 @@ import SensorReaderKit
 
 @main
 struct SensorReaderApp: App {
+    var isUnitTesting: Bool {
+        return ProcessInfo.processInfo.environment["UNITTEST"] == "1"
+    }
 
     let reader: SensorReader
     let useCase: ReadingsUseCase
@@ -25,11 +28,15 @@ struct SensorReaderApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView {
-                NavigationView {
-                    ReadingsList(viewModel: ReadingsListViewModel(provider: useCase))
-                }.tabItem {
-                    Image(systemName: "list.bullet")
+            if isUnitTesting {
+                EmptyView()
+            } else {
+                HomeView {
+                    NavigationView {
+                        ReadingsList(viewModel: ReadingsListViewModel(provider: useCase))
+                    }.tabItem {
+                        Image(systemName: "list.bullet")
+                    }
                 }
             }
         }
