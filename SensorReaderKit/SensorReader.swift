@@ -15,13 +15,16 @@ extension URLSession: NetworkRequestProviding {}
 
 open class SensorReader {
     let provider: NetworkRequestProviding
+    let url: URL
 
-    public init(_ provider: NetworkRequestProviding) {
+    public init(_ provider: NetworkRequestProviding = URLSession.shared,
+                url: URL) {
         self.provider = provider
+        self.url = url
     }
 
     open func readings() async throws -> [some SensorReading] {
-        let request = URLRequest(url: URL(string: "http://192.168.2.159:45678")!)
+        let request = URLRequest(url: url)
         let response = try await provider.data(for: request)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970

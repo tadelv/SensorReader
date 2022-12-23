@@ -22,7 +22,10 @@ struct SensorReaderApp: App {
         config.timeoutIntervalForRequest = 5
         config.timeoutIntervalForResource = 5
         let session = URLSession(configuration: config)
-        self.reader = SensorReader(session)
+        guard let url = URL(string: "http://192.168.2.159:45678") else {
+            fatalError("url could not be constructed")
+        }
+        self.reader = SensorReader(session, url: url)
         self.useCase = ReadingsUseCase(reader: reader)
     }
 

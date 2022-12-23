@@ -34,7 +34,8 @@ final class SensorReaderKitTests: XCTestCase {
 
 
     func testConnectivity() async throws {
-        let client = SensorReader(MockProvider())
+        let client = SensorReader(MockProvider(),
+                                  url: URL(fileURLWithPath: "/"))
         let readings = try await client.readings()
         XCTAssert(readings.isEmpty == false)
         print(readings.filter { $0.unit.contains("C") })
