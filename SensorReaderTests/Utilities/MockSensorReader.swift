@@ -9,7 +9,7 @@ import Foundation
 import SensorReaderKit
 @testable import SensorReader
 
-class MockProvider: SensorReadingsProvider {
+class MockReadingsProvider: SensorReadingsProvider {
     struct MockReading: SensorReading {
         var sensorClass: String { "Class" }
         var name: String

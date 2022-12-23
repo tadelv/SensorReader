@@ -15,14 +15,14 @@ final class ReadingsUseCaseTests: XCTestCase {
     }
 
     var useCase: ReadingsUseCase!
-    var mockProvider: MockProvider!
+    var mockProvider: MockReadingsProvider!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        mockProvider = MockProvider()
+        mockProvider = MockReadingsProvider()
         useCase = ReadingsUseCase(reader: mockProvider, refreshInterval: 0.5)
 
-        let testReadings: [MockProvider.MockReading] = [
+        let testReadings: [MockReadingsProvider.MockReading] = [
             .init(name: "Test",
                   value: "1",
                   unit: "A")
