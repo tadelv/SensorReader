@@ -65,14 +65,8 @@ struct MockFavoriteProvider: FavoritesProviding {
     }
 
     fileprivate init() {
-        let mock = MockProvider().mockReadings.value.first!
-        let model = ReadingModel(id: mock.id,
-                                 device: mock.device,
-                                 name: mock.name,
-                                 value: "\(mock.value)\(mock.unit)")
-        favoritesSubject = CurrentValueSubject([
-            .init(id: model.id)
-        ])
+        let mocks = MockProvider().mockReadings.value[0...3]
+        favoritesSubject = CurrentValueSubject(mocks.map { .init(id: $0.id) })
     }
 
     var addCall: (MockFavoriteProvider, FavoriteModel) throws -> Void = {

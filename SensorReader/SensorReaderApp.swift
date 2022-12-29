@@ -28,7 +28,7 @@ struct SensorReaderApp: App {
             fatalError("url could not be constructed")
         }
         self.reader = SensorReader(session, url: url)
-        self.useCase = ReadingsUseCase(reader: reader)
+        self.readingsUseCase = ReadingsUseCase(reader: reader)
         self.favoritesUseCase = FavoritesUseCase(store: favoritesStore)
     }
 

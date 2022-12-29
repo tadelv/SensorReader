@@ -29,6 +29,18 @@ struct ReadingsList: View {
                         Spacer()
                         Text(reading.value)
                             .font(.callout)
+                    } 
+                    .padding([.top, .bottom])
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button {
+                            viewModel.toggleFavorite(reading)
+                        } label: {
+                            VStack {
+                                Image(systemName: viewModel.isFavorite(reading) ? "star" : "circle")
+                                Text("Favorite")
+                            }
+                        }
+
                     }
                 }
             }

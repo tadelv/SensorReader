@@ -31,6 +31,7 @@ struct DashboardView: View {
                         Text(reading.name)
                             .font(.title2)
                     }
+                    .frame(maxWidth: .infinity)
                     .padding()
                     .contentShape(Rectangle())
                     .overlay(
@@ -39,6 +40,7 @@ struct DashboardView: View {
                     )
                 }
             }
+            .padding()
         }
     }
 }
