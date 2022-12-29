@@ -24,7 +24,8 @@ struct HomeView_Previews: PreviewProvider {
             NavigationView {
                 ReadingsList(
                     viewModel: ReadingsListViewModel(
-                        provider: Self.mockReadingsProvider
+                        provider: Self.mockReadingsProvider,
+                        favorites: Self.mockFavoritesProvider
                     )
                 )
             }

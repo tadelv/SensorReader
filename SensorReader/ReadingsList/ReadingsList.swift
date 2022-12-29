@@ -69,7 +69,8 @@ struct ReadingsList: View {
 struct ReadingsList_Previews: PreviewProvider {
     static var previews: some View {
         ReadingsList(
-            viewModel: ReadingsListViewModel(provider: Self.mockReadingsProvider)
+            viewModel: ReadingsListViewModel(provider: Self.mockReadingsProvider,
+                                             favorites: Self.mockFavoritesProvider)
         )
     }
 }

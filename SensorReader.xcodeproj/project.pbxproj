@@ -35,6 +35,7 @@
 		18C1F8B62942420400ACCF4B /* ReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */; };
 		18C1F8C529424B2300ACCF4B /* ReadingsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */; };
 		18C1F8C829424B5200ACCF4B /* MockSensorReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8C729424B5200ACCF4B /* MockSensorReader.swift */; };
+		18CD7F69295D871500DEE5E8 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD7F68295D871500DEE5E8 /* UserDefaultsStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		18C1F8BB29424B0100ACCF4B /* SensorReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsUseCaseTests.swift; sourceTree = "<group>"; };
 		18C1F8C729424B5200ACCF4B /* MockSensorReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSensorReader.swift; sourceTree = "<group>"; };
+		18CD7F68295D871500DEE5E8 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			children = (
 				1837EC04294461110045CC4E /* FavoritesProviding.swift */,
 				1837EC0C2945C1170045CC4E /* FavoritesUseCase.swift */,
+				18CD7F68295D871500DEE5E8 /* UserDefaultsStore.swift */,
 			);
 			path = FavoritesStore;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			files = (
 				1837EC0029439DD30045CC4E /* ViewModelState.swift in Sources */,
 				1837EC0229439E1A0045CC4E /* ReadingModel.swift in Sources */,
+				18CD7F69295D871500DEE5E8 /* UserDefaultsStore.swift in Sources */,
 				18206F2D293D15F500ED1420 /* HomeView.swift in Sources */,
 				187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */,
 				1837EC0D2945C1170045CC4E /* FavoritesUseCase.swift in Sources */,

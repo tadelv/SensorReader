@@ -15,7 +15,9 @@ struct SensorReaderApp: App {
     }
 
     let reader: SensorReader
-    let useCase: ReadingsUseCase
+    let readingsUseCase: ReadingProviding
+    let favoritesUseCase: FavoritesUseCase<UserDefaultsStore>
+    let favoritesStore = UserDefaultsStore()
 
     init() {
         let config = URLSessionConfiguration.ephemeral
@@ -27,6 +29,7 @@ struct SensorReaderApp: App {
         }
         self.reader = SensorReader(session, url: url)
         self.useCase = ReadingsUseCase(reader: reader)
+        self.favoritesUseCase = FavoritesUseCase(store: favoritesStore)
     }
 
     var body: some Scene {
@@ -35,8 +38,14 @@ struct SensorReaderApp: App {
                 EmptyView()
             } else {
                 HomeView {
+                    DashboardView(viewModel: DashboardViewModel(readingsProvider: readingsUseCase,
+                                                                favoritesProvider: favoritesUseCase))
+                    .tabItem {
+                        Image(systemName: "star")
+                    }
                     NavigationView {
-                        ReadingsList(viewModel: ReadingsListViewModel(provider: useCase))
+                        ReadingsList(viewModel: ReadingsListViewModel(provider: readingsUseCase,
+                                                                     favorites: favoritesUseCase))
                     }.tabItem {
                         Image(systemName: "list.bullet")
                     }

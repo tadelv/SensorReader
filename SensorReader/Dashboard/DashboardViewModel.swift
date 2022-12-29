@@ -5,6 +5,7 @@
 //  Created by Vid Tadel on 12/9/22.
 //
 
+import Foundation
 import Combine
 
 class DashboardViewModel: ObservableObject {
@@ -29,6 +30,7 @@ class DashboardViewModel: ObservableObject {
         readingsProvider
             .readings
             .combineLatest(favoritesProvider.favorites)
+            .receive(on: RunLoop.main)
             .sink { completion in
                 print(completion)
             } receiveValue: { [weak self] readings, favorites in

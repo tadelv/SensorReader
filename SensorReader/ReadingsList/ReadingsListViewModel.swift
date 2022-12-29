@@ -11,18 +11,32 @@ import Combine
 class ReadingsListViewModel: ObservableObject {
     @Published var state: ViewModelState = .idle
     @Published var readings: [ReadingModel] = []
+    private var favorites: [FavoriteModel] = []
 
-    private var providerConnection: AnyCancellable?
+    private var cancellables = Set<AnyCancellable>()
 
     let provider: any ReadingProviding
+    let favoritesProvider: any FavoritesProviding
 
-    init(provider: any ReadingProviding) {
+    init(provider: any ReadingProviding,
+         favorites: any FavoritesProviding) {
         self.provider = provider
+        self.favoritesProvider = favorites
+
+
+        self.favoritesProvider.favorites.sink { [unowned self] completion in
+            if case let .failure(error) = completion {
+                state = .error(error)
+            }
+        } receiveValue: { [unowned self] value in
+            self.favorites = value
+        }
+        .store(in: &cancellables)
     }
 
     func load() async {
         state = .loading
-        providerConnection = provider.readings.map({ readings in
+        provider.readings.map({ readings in
             readings.map {
                 ReadingModel(id: $0.id,
                              device: $0.device,
@@ -38,5 +52,25 @@ class ReadingsListViewModel: ObservableObject {
             readings = models
             state = .idle
         })
+        .store(in: &cancellables)
+    }
+
+    func toggleFavorite(_ reading: ReadingModel) {
+        switch favorites.contains(.init(id: reading.id)) {
+        case true:
+            Task {
+                try? await favoritesProvider.remove(.init(id: reading.id))
+                state = .idle
+            }
+        case false:
+            Task {
+                try? await favoritesProvider.add(.init(id: reading.id))
+                state = .idle
+            }
+        }
+    }
+
+    func isFavorite(_ reading: ReadingModel) -> Bool {
+        favorites.contains(.init(id: reading.id))
     }
 }
