@@ -26,11 +26,11 @@ struct MockProvider: ReadingProviding {
 
     var mockReadings: CurrentValueSubject<[any Reading], Error> = .init([
         MockReading(name: "Temperature",
-                    value: "20",
+                    value: "20.00937819237",
                     unit: "C"),
-        MockReading(name: "Temperature1",
-                    value: "21",
-                    unit: "C"),
+        MockReading(name: "CPU Usage",
+                    value: "0.123534",
+                    unit: "%"),
         MockReading(name: "Temperature2",
                     value: "20",
                     unit: "C"),
