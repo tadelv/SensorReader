@@ -29,6 +29,7 @@
 		1837EC09294461850045CC4E /* FavoritesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC08294461850045CC4E /* FavoritesUseCaseTests.swift */; };
 		1837EC0B294465670045CC4E /* MockPersistenceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC0A294465670045CC4E /* MockPersistenceStore.swift */; };
 		1837EC0D2945C1170045CC4E /* FavoritesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837EC0C2945C1170045CC4E /* FavoritesUseCase.swift */; };
+		1865AC97295F7522004BF767 /* ReadingsListcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865AC96295F7522004BF767 /* ReadingsListcell.swift */; };
 		186C774F29473FA00076AE14 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C774E29473FA00076AE14 /* Recorder.swift */; };
 		187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C90294259AC00F585B1 /* ReadingProviding.swift */; };
 		187F4C9429425E3D00F585B1 /* ReadingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */; };
@@ -36,6 +37,7 @@
 		18C1F8C529424B2300ACCF4B /* ReadingsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */; };
 		18C1F8C829424B5200ACCF4B /* MockSensorReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8C729424B5200ACCF4B /* MockSensorReader.swift */; };
 		18CD7F69295D871500DEE5E8 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD7F68295D871500DEE5E8 /* UserDefaultsStore.swift */; };
+		18CD7F6B295DFBA400DEE5E8 /* ReadingModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD7F6A295DFBA400DEE5E8 /* ReadingModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,7 @@
 		1837EC08294461850045CC4E /* FavoritesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUseCaseTests.swift; sourceTree = "<group>"; };
 		1837EC0A294465670045CC4E /* MockPersistenceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistenceStore.swift; sourceTree = "<group>"; };
 		1837EC0C2945C1170045CC4E /* FavoritesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUseCase.swift; sourceTree = "<group>"; };
+		1865AC96295F7522004BF767 /* ReadingsListcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsListcell.swift; sourceTree = "<group>"; };
 		186C774E29473FA00076AE14 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		187F4C90294259AC00F585B1 /* ReadingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingProviding.swift; sourceTree = "<group>"; };
 		187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsListViewModel.swift; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsUseCaseTests.swift; sourceTree = "<group>"; };
 		18C1F8C729424B5200ACCF4B /* MockSensorReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSensorReader.swift; sourceTree = "<group>"; };
 		18CD7F68295D871500DEE5E8 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		18CD7F6A295DFBA400DEE5E8 /* ReadingModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				18206F2A293CF59600ED1420 /* ReadingsList.swift */,
+				1865AC96295F7522004BF767 /* ReadingsListcell.swift */,
 				187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */,
 			);
 			path = ReadingsList;
@@ -268,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				18C1F8C429424B2300ACCF4B /* ReadingsUseCaseTests.swift */,
+				18CD7F6A295DFBA400DEE5E8 /* ReadingModelTests.swift */,
 				1837EC08294461850045CC4E /* FavoritesUseCaseTests.swift */,
 				18C1F8C629424B4000ACCF4B /* Utilities */,
 			);
@@ -471,6 +477,7 @@
 				1837EC05294461110045CC4E /* FavoritesProviding.swift in Sources */,
 				18206EF3293CC13A00ED1420 /* SensorReaderApp.swift in Sources */,
 				1837EBFB294369BD0045CC4E /* DashboardViewModel.swift in Sources */,
+				1865AC97295F7522004BF767 /* ReadingsListcell.swift in Sources */,
 				1837EBFE29436BA00045CC4E /* Preview+Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CD7F6B295DFBA400DEE5E8 /* ReadingModelTests.swift in Sources */,
 				186C774F29473FA00076AE14 /* Recorder.swift in Sources */,
 				18C1F8C829424B5200ACCF4B /* MockSensorReader.swift in Sources */,
 				1837EC0B294465670045CC4E /* MockPersistenceStore.swift in Sources */,

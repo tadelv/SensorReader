@@ -12,36 +12,31 @@ import SensorReaderKit
 
 struct ReadingsList: View {
     @ObservedObject private var viewModel: ReadingsListViewModel
+    @State var searchText = ""
 
     init(viewModel: ReadingsListViewModel) {
         _viewModel = ObservedObject(initialValue: viewModel)
     }
 
+    var searchResults: [ReadingModel] {
+        if searchText.isEmpty {
+            return viewModel.readings
+        }
+        return viewModel.readings.filter {
+            $0.name.lowercased().contains(searchText) ||
+            $0.device.lowercased().contains(searchText)
+        }
+    }
+
     var body: some View {
         ZStack {
             List {
-                ForEach(viewModel.readings) { reading in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(reading.name)
-                            Text(reading.device).font(.caption)
-                        }
-                        Spacer()
-                        Text(reading.value)
-                            .font(.callout)
-                    } 
-                    .padding([.top, .bottom])
-                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
-                        Button {
-                            viewModel.toggleFavorite(reading)
-                        } label: {
-                            VStack {
-                                Image(systemName: viewModel.isFavorite(reading) ? "star" : "circle")
-                                Text("Favorite")
-                            }
-                        }
-
-                    }
+                ForEach(searchResults) { reading in
+                    ReadingsListCell(reading: reading,
+                                     isFavorite: viewModel.isFavorite(reading),
+                                     buttonTap: {
+                        viewModel.toggleFavorite(reading)
+                    })
                 }
             }
             if case .loading = viewModel.state {
@@ -69,6 +64,9 @@ struct ReadingsList: View {
 
         }
         .navigationTitle("List")
+        .searchable(text: $searchText)
+        .autocorrectionDisabled()
+        .textInputAutocapitalization(.never)
     }
 
     func refresh() {
@@ -80,9 +78,11 @@ struct ReadingsList: View {
 
 struct ReadingsList_Previews: PreviewProvider {
     static var previews: some View {
-        ReadingsList(
-            viewModel: ReadingsListViewModel(provider: Self.mockReadingsProvider,
-                                             favorites: Self.mockFavoritesProvider)
-        )
+        NavigationView {
+            ReadingsList(
+                viewModel: ReadingsListViewModel(provider: Self.mockReadingsProvider,
+                                                 favorites: Self.mockFavoritesProvider)
+            )
+        }
     }
 }

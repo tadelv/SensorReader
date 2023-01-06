@@ -77,11 +77,13 @@ struct MockFavoriteProvider: FavoritesProviding {
         try addCall(self, favorite)
     }
 
-    var removeCall: (MockFavoriteProvider, FavoriteModel) throws -> Void = { _, _ in
-
+    var removeCall: (MockFavoriteProvider, FavoriteModel) throws -> Void = { provider, favorite in
+        var val = provider.favoritesSubject.value
+        val.removeAll { $0.id == favorite.id }
+        provider.favoritesSubject.send(val)
     }
     func remove(_ favorite: FavoriteModel) async throws {
-
+        try removeCall(self, favorite)
     }
 }
 
