@@ -15,27 +15,32 @@ class DashboardViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     @Published var favoriteReadings: [ReadingModel] = []
+    @Published var state: ViewModelState = .idle
 
     init(readingsProvider: any ReadingProviding,
          favoritesProvider: any FavoritesProviding) {
         self.readingsProvider = readingsProvider
         self.favoritesProvider = favoritesProvider
+    }
+
+    func attach() {
         Task {
             await load()
         }
     }
 
-    @MainActor
     func load() async {
+        state = .loading
         readingsProvider
             .readings
             .combineLatest(favoritesProvider.favorites)
             .receive(on: RunLoop.main)
-            .sink { completion in
-                print(completion)
-            } receiveValue: { [weak self] readings, favorites in
-                guard let self = self else { return }
-                self.favoriteReadings = readings.filter { reading in
+            .sink { [unowned self] completion in
+                if case let .failure(error) = completion {
+                    state = .error(error)
+                }
+            } receiveValue: { [unowned self] readings, favorites in
+                favoriteReadings = readings.filter { reading in
                     favorites.contains { favorite in
                         reading.id == favorite.id
                     }
@@ -45,6 +50,7 @@ class DashboardViewModel: ObservableObject {
                                  name: $0.name,
                                  value: "\($0.value)\($0.unit)")
                 }
+                state = .idle
             }.store(in: &cancellables)
     }
 }

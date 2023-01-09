@@ -23,7 +23,7 @@ open class SensorReader {
         self.url = url
     }
 
-    open func readings() async throws -> [some SensorReading] {
+    open func readings() async throws -> [any SensorReading] {
         let request = URLRequest(url: url)
         let response = try await provider.data(for: request)
         let decoder = JSONDecoder()

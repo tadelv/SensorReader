@@ -42,6 +42,9 @@ struct DashboardView: View {
             }
             .padding()
         }
+        .onAppear {
+            viewModel.attach()
+        }
     }
 }
 

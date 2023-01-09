@@ -10,15 +10,14 @@ import SensorReaderKit
 
 // MARK: DI for ReadingsUseCase
 protocol SensorReadingsProvider {
-    associatedtype Reading: SensorReading
-    func readings() async throws -> [Reading]
+    func readings() async throws -> [any SensorReading]
 }
 
 extension SensorReader: SensorReadingsProvider {}
 
 // MARK: - UseCase implementation
 final class ReadingsUseCase: ReadingProviding {
-    private let reader: any SensorReadingsProvider
+    var reader: any SensorReadingsProvider
     private let refreshInterval: Double
     private var readingsSubject = PassthroughSubject<[any Reading], Error>()
     private var subjects: [any Subscription] = []

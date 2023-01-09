@@ -9,29 +9,74 @@ import SensorReaderKit
 import SwiftUI
 
 struct CompositionRoot {
-    let reader: SensorReader
-    let readingsUseCase: ReadingProviding
+    let readingsUseCase: ReadingsUseCase
     let favoritesUseCase: FavoritesUseCase<UserDefaultsStore>
     let favoritesStore = UserDefaultsStore()
 
+    let settingsViewModel: SettingsViewModel
+
     init() {
+        self.readingsUseCase = ReadingsUseCase(reader: UnconfiguredReader())
+        self.favoritesUseCase = FavoritesUseCase(store: favoritesStore)
+
         let config = URLSessionConfiguration.ephemeral
         config.timeoutIntervalForRequest = 5
         config.timeoutIntervalForResource = 5
         let session = URLSession(configuration: config)
-        guard let url = URL(string: "http://192.168.2.159:45678") else {
-            fatalError("url could not be constructed")
+
+        settingsViewModel = SettingsViewModel { [readingsUseCase] url in
+            readingsUseCase.reader = SensorReader(session, url: url)
+            //clunky restart
+            _ = readingsUseCase.readings.sink { _ in
+
+            } receiveValue: { _ in
+
+            }
         }
-        self.reader = SensorReader(session, url: url)
-        self.readingsUseCase = HomeView_Previews.mockReadingsProvider//ReadingsUseCase(reader: reader)
-        self.favoritesUseCase = FavoritesUseCase(store: favoritesStore)
+
+
     }
 
-    @MainActor
     var compose: some View {
+        RootView(settingsViewModel: settingsViewModel,
+                 readingsUseCase: readingsUseCase,
+                 favoritesUseCase: favoritesUseCase)
+    }
+}
+
+struct UnconfiguredReader: SensorReadingsProvider {
+    struct Unconfigured: LocalizedError {
+        var errorDescription: String = "Not configured"
+    }
+    func readings() async throws -> [any SensorReading] {
+        throw Unconfigured()
+    }
+}
+
+struct RootView: View {
+    @ObservedObject var settingsViewModel: SettingsViewModel
+    let readingsUseCase: ReadingsUseCase
+    let favoritesUseCase: FavoritesUseCase<UserDefaultsStore>
+
+    init(settingsViewModel: SettingsViewModel, readingsUseCase: ReadingsUseCase, favoritesUseCase: FavoritesUseCase<UserDefaultsStore>) {
+        self.settingsViewModel = settingsViewModel
+        self.readingsUseCase = readingsUseCase
+        self.favoritesUseCase = favoritesUseCase
+    }
+
+    var body: some View {
         HomeView {
-            DashboardView(viewModel: DashboardViewModel(readingsProvider: readingsUseCase,
-                                                        favoritesProvider: favoritesUseCase))
+            NavigationView {
+                DashboardView(viewModel: DashboardViewModel(readingsProvider: readingsUseCase,
+                                                            favoritesProvider: favoritesUseCase))
+                .toolbar {
+                    Button {
+                        settingsViewModel.settingsVisible = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
+            }
             .tabItem {
                 Image(systemName: "star")
             }
@@ -41,6 +86,17 @@ struct CompositionRoot {
             }.tabItem {
                 Image(systemName: "list.bullet")
             }
+        }
+        .sheet(isPresented: $settingsViewModel.settingsVisible) {
+            SettingsView(serverUrl: $settingsViewModel.serverUrl,
+                         urlValid: $settingsViewModel.urlInvalid) {
+                settingsViewModel.validateAndContinue()
+                settingsViewModel.settingsVisible = false
+            }
+            .interactiveDismissDisabled(settingsViewModel.urlInvalid)
+        }
+        .onAppear {
+            settingsViewModel.checkConfiguration()
         }
     }
 }
