@@ -54,7 +54,7 @@ class MockReadingsProvider: SensorReadingsProvider {
                     unit: "C")
     ]
 
-    func readings() async throws -> [MockReading] {
+    func readings() async throws -> [any SensorReading] {
         callCount += 1
         return try readingsResult()
     }

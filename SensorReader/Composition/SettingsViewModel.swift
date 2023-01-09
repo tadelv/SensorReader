@@ -14,7 +14,7 @@ final class SettingsViewModel: ObservableObject {
     @Published var urlInvalid = false
     @Published var settingsVisible = false
 
-    var configurationDone: (URL) -> Void
+    let configurationDone: (URL) -> Void
 
     private var cancellables = Set<AnyCancellable>()
 
