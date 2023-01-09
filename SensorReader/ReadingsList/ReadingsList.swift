@@ -38,7 +38,7 @@ struct ReadingsList: View {
                         viewModel.toggleFavorite(reading)
                     })
                 }
-            }
+            }.opacity(viewModel.state == .idle ? 1.0 : 0.0)
             if case .loading = viewModel.state {
                 VStack {
                     ProgressView()

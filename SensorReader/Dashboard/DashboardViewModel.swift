@@ -37,8 +37,8 @@ class DashboardViewModel: ObservableObject {
             .combineLatest(favoritesProvider.favorites)
             .receive(on: RunLoop.main)
             .sink { [unowned self] completion in
-                if case let .failure(error) = completion {
-                    state = .error(error)
+                if case let .failure(err) = completion {
+                    state = .error(err)
                 }
             } receiveValue: { [unowned self] readings, favorites in
                 favoriteReadings = readings.filter { reading in

@@ -7,8 +7,20 @@
 
 import Foundation
 
-enum ViewModelState {
+enum ViewModelState: Equatable {
     case idle
     case loading
-    case error(Error)
+    case error(ModelError)
+
+    static let error: (Error) -> ViewModelState = { error in
+        ViewModelState.error(ModelError(error))
+    }
+}
+
+struct ModelError: Error, Equatable {
+    var localizedDescription: String
+
+    init(_ error: any Error) {
+        self.localizedDescription = error.localizedDescription
+    }
 }

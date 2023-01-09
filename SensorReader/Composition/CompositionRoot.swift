@@ -28,12 +28,6 @@ struct CompositionRoot {
 
         settingsViewModel = SettingsViewModel { [readingsUseCase] url in
             readingsUseCase.reader = SensorReader(session, url: url)
-            //clunky restart
-            _ = readingsUseCase.readings.sink { _ in
-
-            } receiveValue: { _ in
-
-            }
         } loadUrl: {
             UserDefaults.standard.url(forKey: userDefaultsUrlKey)
         } storeUrl: { url in
