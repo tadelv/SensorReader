@@ -25,9 +25,13 @@ final class ReadingsUseCase: ReadingProviding {
 
     lazy private(set) var readings: AnyPublisher<[any Reading], Error> = {
         readingsSubject.handleEvents(receiveSubscription: { [unowned self] sub in
-            self.subscriptionReceived(sub)
+            DispatchQueue.main.async {
+                self.subscriptionReceived(sub)
+            }
         }, receiveCancel: { [unowned self] in
-            self.subscriptionRemoved()
+            DispatchQueue.main.async {
+                self.subscriptionRemoved()
+            }
         })
         .eraseToAnyPublisher()
     }()

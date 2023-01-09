@@ -13,6 +13,7 @@ class DashboardViewModel: ObservableObject {
     let favoritesProvider: any FavoritesProviding
 
     private var cancellables = Set<AnyCancellable>()
+    private var readingsConnection: AnyCancellable?
 
     @Published var favoriteReadings: [ReadingModel] = []
     @Published var state: ViewModelState = .idle
@@ -31,7 +32,7 @@ class DashboardViewModel: ObservableObject {
     }
 
     func load() async {
-        readingsProvider
+        readingsConnection = readingsProvider
             .readings
             .combineLatest(favoritesProvider.favorites)
             .receive(on: RunLoop.main)
@@ -51,6 +52,6 @@ class DashboardViewModel: ObservableObject {
                                  value: "\($0.value)\($0.unit)")
                 }
                 state = .idle
-            }.store(in: &cancellables)
+            }
     }
 }

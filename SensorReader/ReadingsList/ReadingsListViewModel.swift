@@ -14,6 +14,7 @@ class ReadingsListViewModel: ObservableObject {
     private var favorites: [FavoriteModel] = []
 
     private var cancellables = Set<AnyCancellable>()
+    private var readingsConnection: AnyCancellable?
 
     let provider: any ReadingProviding
     let favoritesProvider: any FavoritesProviding
@@ -36,7 +37,7 @@ class ReadingsListViewModel: ObservableObject {
 
     func load() async {
         state = .loading
-        provider.readings.map({ readings in
+        readingsConnection = provider.readings.map({ readings in
             readings.map {
                 ReadingModel(id: $0.id,
                              device: $0.device,
@@ -52,7 +53,6 @@ class ReadingsListViewModel: ObservableObject {
             readings = models
             state = .idle
         })
-        .store(in: &cancellables)
     }
 
     func toggleFavorite(_ reading: ReadingModel) {
