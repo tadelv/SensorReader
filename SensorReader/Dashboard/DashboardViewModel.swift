@@ -24,13 +24,13 @@ class DashboardViewModel: ObservableObject {
     }
 
     func attach() {
+        state = .loading
         Task {
             await load()
         }
     }
 
     func load() async {
-        state = .loading
         readingsProvider
             .readings
             .combineLatest(favoritesProvider.favorites)

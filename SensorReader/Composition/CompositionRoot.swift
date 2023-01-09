@@ -8,6 +8,8 @@
 import SensorReaderKit
 import SwiftUI
 
+private let userDefaultsUrlKey = "server-url"
+
 struct CompositionRoot {
     let readingsUseCase: ReadingsUseCase
     let favoritesUseCase: FavoritesUseCase<UserDefaultsStore>
@@ -32,6 +34,10 @@ struct CompositionRoot {
             } receiveValue: { _ in
 
             }
+        } loadUrl: {
+            UserDefaults.standard.url(forKey: userDefaultsUrlKey)
+        } storeUrl: { url in
+            UserDefaults.standard.set(url, forKey: userDefaultsUrlKey)
         }
 
 

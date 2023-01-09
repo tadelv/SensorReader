@@ -15,11 +15,17 @@ final class SettingsViewModel: ObservableObject {
     @Published var settingsVisible = false
 
     let configurationDone: (URL) -> Void
+    let loadUrl: () -> URL?
+    let storeUrl: (URL) -> Void
 
     private var cancellables = Set<AnyCancellable>()
 
-    init(_ configCallback: @escaping (URL) -> Void) {
+    init(_ configCallback: @escaping (URL) -> Void,
+         loadUrl: @escaping () -> URL?,
+         storeUrl: @escaping (URL) -> Void) {
         self.configurationDone = configCallback
+        self.loadUrl = loadUrl
+        self.storeUrl = storeUrl
 
         $serverUrl.sink { [unowned self] val in
             guard let _ = URL(string: val) else {
@@ -31,13 +37,12 @@ final class SettingsViewModel: ObservableObject {
     }
 
     func checkConfiguration() {
-        guard let urlString = UserDefaults.standard.string(forKey: "server-url"),
-              let url = URL(string: urlString) else {
+        guard let url = loadUrl() else {
             urlInvalid = true
             settingsVisible = true
             return
         }
-        serverUrl = urlString
+        serverUrl = url.absoluteString
         configurationDone(url)
     }
 
@@ -46,7 +51,7 @@ final class SettingsViewModel: ObservableObject {
             urlInvalid = true
             return
         }
-        UserDefaults.standard.set(serverUrl, forKey: "server-url")
+        storeUrl(url)
         configurationDone(url)
     }
 }
