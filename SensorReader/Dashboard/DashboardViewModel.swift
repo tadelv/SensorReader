@@ -35,7 +35,7 @@ class DashboardViewModel: ObservableObject {
         readingsConnection = readingsProvider
             .readings
             .combineLatest(favoritesProvider.favorites)
-            .receive(on: RunLoop.main)
+            .receive(on: DispatchQueue.main)
             .sink { [unowned self] completion in
                 if case let .failure(err) = completion {
                     state = .error(err)

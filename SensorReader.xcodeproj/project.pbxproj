@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181BD84D296EC97E00751EE8 /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = 181BD84C296EC97E00751EE8 /* CombineSchedulers */; };
 		18206EF3293CC13A00ED1420 /* SensorReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */; };
 		18206EF7293CC13B00ED1420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18206EF6293CC13B00ED1420 /* Assets.xcassets */; };
 		18206EFB293CC13B00ED1420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18206EFA293CC13B00ED1420 /* Preview Assets.xcassets */; };
@@ -132,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181BD84D296EC97E00751EE8 /* CombineSchedulers in Frameworks */,
 				18206F1B293CC17700ED1420 /* SensorReaderKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +338,9 @@
 				18206F1A293CC17700ED1420 /* PBXTargetDependency */,
 			);
 			name = SensorReader;
+			packageProductDependencies = (
+				181BD84C296EC97E00751EE8 /* CombineSchedulers */,
+			);
 			productName = SensorReader;
 			productReference = 18206EEF293CC13A00ED1420 /* SensorReader.app */;
 			productType = "com.apple.product-type.application";
@@ -430,6 +435,9 @@
 				Base,
 			);
 			mainGroup = 18206EE6293CC13A00ED1420;
+			packageReferences = (
+				181BD84B296EC97E00751EE8 /* XCRemoteSwiftPackageReference "combine-schedulers" */,
+			);
 			productRefGroup = 18206EF0293CC13A00ED1420 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -949,6 +957,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		181BD84B296EC97E00751EE8 /* XCRemoteSwiftPackageReference "combine-schedulers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/combine-schedulers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		181BD84C296EC97E00751EE8 /* CombineSchedulers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 181BD84B296EC97E00751EE8 /* XCRemoteSwiftPackageReference "combine-schedulers" */;
+			productName = CombineSchedulers;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18206EE7293CC13A00ED1420 /* Project object */;
 }

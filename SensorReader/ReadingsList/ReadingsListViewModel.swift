@@ -5,6 +5,7 @@
 //  Created by Vid Tadel on 12/8/22.
 //
 
+import Foundation
 import Combine
 
 @MainActor
@@ -37,7 +38,9 @@ class ReadingsListViewModel: ObservableObject {
 
     func load() async {
         state = .loading
-        readingsConnection = provider.readings.map({ readings in
+        readingsConnection = provider.readings
+            .receive(on: DispatchQueue.main)
+            .map({ readings in
             readings.map {
                 ReadingModel(id: $0.id,
                              device: $0.device,

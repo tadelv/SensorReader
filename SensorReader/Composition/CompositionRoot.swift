@@ -5,6 +5,7 @@
 //  Created by Vid Tadel on 1/6/23.
 //
 
+import CombineSchedulers
 import SensorReaderKit
 import SwiftUI
 
@@ -18,7 +19,8 @@ struct CompositionRoot {
     let settingsViewModel: SettingsViewModel
 
     init() {
-        self.readingsUseCase = ReadingsUseCase(reader: UnconfiguredReader())
+        self.readingsUseCase = ReadingsUseCase(reader: UnconfiguredReader(),
+                                               scheduler: DispatchQueue.main.eraseToAnyScheduler())
         self.favoritesUseCase = FavoritesUseCase(store: favoritesStore)
 
         let config = URLSessionConfiguration.ephemeral

@@ -6,6 +6,7 @@
 //
 
 import Combine
+import CombineSchedulers
 import SensorReaderKit
 
 // MARK: DI for ReadingsUseCase
@@ -19,9 +20,10 @@ extension SensorReader: SensorReadingsProvider {}
 final class ReadingsUseCase: ReadingProviding {
     var reader: any SensorReadingsProvider
     private let refreshInterval: Double
+    private let scheduler: AnySchedulerOf<DispatchQueue>
     private var readingsSubject = PassthroughSubject<[any Reading], Error>()
     private var subjects: [any Subscription] = []
-    private var timer: Timer?
+    private var schedulerConnection: Cancellable?
 
     lazy private(set) var readings: AnyPublisher<[any Reading], Error> = {
         readingsSubject.handleEvents(receiveSubscription: { [unowned self] sub in
@@ -36,18 +38,28 @@ final class ReadingsUseCase: ReadingProviding {
         .eraseToAnyPublisher()
     }()
 
-    init(reader: any SensorReadingsProvider, refreshInterval: Double = 5.0) {
+    init(reader: any SensorReadingsProvider,
+         refreshInterval: Double = 5.0,
+         scheduler: AnySchedulerOf<DispatchQueue>) {
         self.reader = reader
         self.refreshInterval = refreshInterval
+        self.scheduler = scheduler
     }
 
     private func subscriptionReceived(_ sub: any Subscription) {
         subjects.append(sub)
-        if timer == nil {
-            timer = .scheduledTimer(withTimeInterval: refreshInterval, repeats: true, block: { [weak self] _ in
+        if schedulerConnection == nil {
+//            schedulerConnection = scheduler.timerPublisher(every: .seconds(refreshInterval))
+//                .autoconnect()
+//                .sink { [weak self] _ in
+//                    self?.timerFired()
+//                }
+//            timerFired()
+            schedulerConnection = scheduler.schedule(after: scheduler.now,
+                               interval: .seconds(_: refreshInterval),
+                               tolerance: .zero) { [weak self] in
                 self?.timerFired()
-            })
-            timerFired()
+            }
         }
     }
 
@@ -67,23 +79,19 @@ final class ReadingsUseCase: ReadingProviding {
                 let readings = try await self.reader
                     .readings()
                     .map(ReadingImpl.init(from:))
-                await MainActor.run {
-                    self.readingsSubject.send(readings)
-                }
+                self.readingsSubject.send(readings)
             } catch {
                 stopTimer()
                 self.subjects = []
-                await MainActor.run {
-                    self.readingsSubject.send(completion: .failure(error))
-                    self.resetPublisher()
-                }
+                self.readingsSubject.send(completion: .failure(error))
+                self.resetPublisher()
             }
         }
     }
 
     private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
+        schedulerConnection?.cancel()
+        schedulerConnection = nil
     }
 
     private func resetPublisher() {
