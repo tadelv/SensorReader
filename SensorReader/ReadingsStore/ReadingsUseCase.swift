@@ -25,18 +25,18 @@ final class ReadingsUseCase: ReadingProviding {
     private var subjects: [any Subscription] = []
     private var schedulerConnection: Cancellable?
 
-    lazy private(set) var readings: AnyPublisher<[any Reading], Error> = {
+    var readings: AnyPublisher<[any Reading], Error> {
         readingsSubject.handleEvents(receiveSubscription: { [unowned self] sub in
-            DispatchQueue.main.async {
-                self.subscriptionReceived(sub)
+            Task {
+                await self.subscriptionReceived(sub)
             }
         }, receiveCancel: { [unowned self] in
-            DispatchQueue.main.async {
-                self.subscriptionRemoved()
+            Task {
+                await self.subscriptionRemoved()
             }
         })
         .eraseToAnyPublisher()
-    }()
+    }
 
     init(reader: any SensorReadingsProvider,
          refreshInterval: Double = 5.0,
@@ -45,7 +45,7 @@ final class ReadingsUseCase: ReadingProviding {
         self.refreshInterval = refreshInterval
         self.scheduler = scheduler
     }
-
+    @MainActor
     private func subscriptionReceived(_ sub: any Subscription) {
         subjects.append(sub)
         if schedulerConnection == nil {
@@ -63,6 +63,7 @@ final class ReadingsUseCase: ReadingProviding {
         }
     }
 
+    @MainActor
     private func subscriptionRemoved() {
         _ = subjects.popLast()
         if subjects.isEmpty {
@@ -81,27 +82,21 @@ final class ReadingsUseCase: ReadingProviding {
                     .map(ReadingImpl.init(from:))
                 self.readingsSubject.send(readings)
             } catch {
-                stopTimer()
-                self.subjects = []
+                await stopTimer()
                 self.readingsSubject.send(completion: .failure(error))
-                self.resetPublisher()
+                await MainActor.run {
+                    self.readingsSubject = .init()
+                    self.subjects = []
+                }
+
             }
         }
     }
 
+    @MainActor
     private func stopTimer() {
         schedulerConnection?.cancel()
         schedulerConnection = nil
-    }
-
-    private func resetPublisher() {
-        readingsSubject = .init()
-        readings = readingsSubject.handleEvents(receiveSubscription: { [unowned self] sub in
-            self.subscriptionReceived(sub)
-        }, receiveCancel: { [unowned self] in
-            self.subscriptionRemoved()
-        })
-        .eraseToAnyPublisher()
     }
 }
 
