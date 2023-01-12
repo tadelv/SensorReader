@@ -39,29 +39,28 @@ final class ReadingsUseCaseTests: XCTestCase {
             XCTFail("received unexpected completion: \($0)")
         } receiveValue: { readings in
             XCTAssertEqual(readings.count, 1, "got: \(readings)")
+            XCTAssertEqual(readings[0].name, "Test")
+            XCTAssertEqual(readings[0].value, "1")
+            XCTAssertEqual(readings[0].unit, "A")
         }
-        await testScheduler.advance(by: 1)
+        let recorder = useCase.readings.record()
+        await testScheduler.advance()
         XCTAssertEqual(mockProvider.callCount, 1)
-        withExtendedLifetime(cancellable) {}
+        XCTAssertEqual(recorder.records.count, 1)
+        cancellable.cancel()
     }
 
     func test_schedulesTimer() async {
-
         let cancellable = useCase.readings.sink {
             XCTFail("received unexpected completion: \($0)")
         } receiveValue: { _ in }
         await testScheduler.advance(by: .seconds(5))
         XCTAssertEqual(mockProvider.callCount, 2)
-        withExtendedLifetime(cancellable) {}
+        cancellable.cancel()
     }
 
     func test_stopsTimer() async {
-        let cancellable = useCase.readings.sink { _ in
-
-        } receiveValue: { _ in
-
-        }
-
+        let cancellable = useCase.readings.sink { _ in } receiveValue: { _ in }
         await testScheduler.advance(by: 1)
         cancellable.cancel()
         await testScheduler.advance(by: 4)
@@ -73,13 +72,9 @@ final class ReadingsUseCaseTests: XCTestCase {
             throw TestError.test
         }
 
-        let cancellable = useCase.readings.sink { _ in
-
-        } receiveValue: { _ in
-
-        }
+        let cancellable = useCase.readings.sink { _ in } receiveValue: { _ in }
         await testScheduler.advance(by: 5)
-        withExtendedLifetime(cancellable) {}
+        cancellable.cancel()
         XCTAssertEqual(mockProvider.callCount, 1)
     }
 
@@ -96,6 +91,7 @@ final class ReadingsUseCaseTests: XCTestCase {
         } receiveValue: { _ in }
         await testScheduler.advance(by: 1)
         XCTAssertEqual(mockProvider.callCount, 2)
+        cancellable.cancel()
     }
 
     func test_reloadsIfFetchFailsOnceAndResubscribed() async {
@@ -137,7 +133,7 @@ final class ReadingsUseCaseTests: XCTestCase {
         }
         await testScheduler.advance(by: 1)
         waitForExpectations(timeout: 0.1)
-        withExtendedLifetime([cancellable, cancellable2]) {}
+        _ = [cancellable, cancellable2].map { $0.cancel() }
         XCTAssertEqual(mockProvider.callCount, 2)
     }
 }
