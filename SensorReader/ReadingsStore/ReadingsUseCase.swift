@@ -7,6 +7,7 @@
 
 import Combine
 import CombineSchedulers
+import Foundation
 import SensorReaderKit
 
 // MARK: DI for ReadingsUseCase

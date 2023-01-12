@@ -11,14 +11,6 @@
 		18206EF3293CC13A00ED1420 /* SensorReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206EF2293CC13A00ED1420 /* SensorReaderApp.swift */; };
 		18206EF7293CC13B00ED1420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18206EF6293CC13B00ED1420 /* Assets.xcassets */; };
 		18206EFB293CC13B00ED1420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18206EFA293CC13B00ED1420 /* Preview Assets.xcassets */; };
-		18206F0A293CC17700ED1420 /* SensorReaderKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 18206F09293CC17700ED1420 /* SensorReaderKit.docc */; };
-		18206F10293CC17700ED1420 /* SensorReaderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18206F06293CC17700ED1420 /* SensorReaderKit.framework */; };
-		18206F17293CC17700ED1420 /* SensorReaderKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F16293CC17700ED1420 /* SensorReaderKitTests.swift */; };
-		18206F18293CC17700ED1420 /* SensorReaderKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 18206F08293CC17700ED1420 /* SensorReaderKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18206F1B293CC17700ED1420 /* SensorReaderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18206F06293CC17700ED1420 /* SensorReaderKit.framework */; platformFilters = (ios, macos, ); };
-		18206F1C293CC17700ED1420 /* SensorReaderKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18206F06293CC17700ED1420 /* SensorReaderKit.framework */; platformFilters = (ios, macos, ); settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		18206F25293CC18600ED1420 /* SensorReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F24293CC18600ED1420 /* SensorReader.swift */; };
-		18206F27293CC22F00ED1420 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 18206F26293CC22F00ED1420 /* data.json */; };
 		18206F2B293CF59600ED1420 /* ReadingsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2A293CF59600ED1420 /* ReadingsList.swift */; };
 		18206F2D293D15F500ED1420 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2C293D15F500ED1420 /* HomeView.swift */; };
 		18206F2F293D1E7200ED1420 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18206F2E293D1E7200ED1420 /* DashboardView.swift */; };
@@ -35,6 +27,7 @@
 		1865ACB729685CDC004BF767 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865ACB629685CDC004BF767 /* SettingsView.swift */; };
 		1865ACB929685DCF004BF767 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1865ACB829685DCF004BF767 /* SettingsViewModel.swift */; };
 		186C774F29473FA00076AE14 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C774E29473FA00076AE14 /* Recorder.swift */; };
+		18733FB929704C2900ECF800 /* SensorReaderKit in Frameworks */ = {isa = PBXBuildFile; productRef = 18733FB829704C2900ECF800 /* SensorReaderKit */; };
 		187F4C91294259AC00F585B1 /* ReadingProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C90294259AC00F585B1 /* ReadingProviding.swift */; };
 		187F4C9429425E3D00F585B1 /* ReadingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */; };
 		18C1F8B62942420400ACCF4B /* ReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */; };
@@ -45,27 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		18206F11293CC17700ED1420 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18206EE7293CC13A00ED1420 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18206F05293CC17700ED1420;
-			remoteInfo = SensorReaderKit;
-		};
-		18206F13293CC17700ED1420 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18206EE7293CC13A00ED1420 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18206EEE293CC13A00ED1420;
-			remoteInfo = SensorReader;
-		};
-		18206F19293CC17700ED1420 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18206EE7293CC13A00ED1420 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18206F05293CC17700ED1420;
-			remoteInfo = SensorReaderKit;
-		};
 		18C1F8BF29424B0100ACCF4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 18206EE7293CC13A00ED1420 /* Project object */;
@@ -82,7 +54,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				18206F1C293CC17700ED1420 /* SensorReaderKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,13 +66,6 @@
 		18206EF6293CC13B00ED1420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18206EF8293CC13B00ED1420 /* SensorReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SensorReader.entitlements; sourceTree = "<group>"; };
 		18206EFA293CC13B00ED1420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		18206F06293CC17700ED1420 /* SensorReaderKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SensorReaderKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18206F08293CC17700ED1420 /* SensorReaderKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorReaderKit.h; sourceTree = "<group>"; };
-		18206F09293CC17700ED1420 /* SensorReaderKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SensorReaderKit.docc; sourceTree = "<group>"; };
-		18206F0F293CC17700ED1420 /* SensorReaderKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorReaderKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		18206F16293CC17700ED1420 /* SensorReaderKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorReaderKitTests.swift; sourceTree = "<group>"; };
-		18206F24293CC18600ED1420 /* SensorReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorReader.swift; sourceTree = "<group>"; };
-		18206F26293CC22F00ED1420 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		18206F2A293CF59600ED1420 /* ReadingsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsList.swift; sourceTree = "<group>"; };
 		18206F2C293D15F500ED1420 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		18206F2E293D1E7200ED1420 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
@@ -118,6 +82,7 @@
 		1865ACB629685CDC004BF767 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1865ACB829685DCF004BF767 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		186C774E29473FA00076AE14 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		18733FB629704BA800ECF800 /* SensorReaderKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SensorReaderKit; sourceTree = "<group>"; };
 		187F4C90294259AC00F585B1 /* ReadingProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingProviding.swift; sourceTree = "<group>"; };
 		187F4C9329425E3D00F585B1 /* ReadingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsListViewModel.swift; sourceTree = "<group>"; };
 		18C1F8B52942420400ACCF4B /* ReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsUseCase.swift; sourceTree = "<group>"; };
@@ -133,23 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18733FB929704C2900ECF800 /* SensorReaderKit in Frameworks */,
 				181BD84D296EC97E00751EE8 /* CombineSchedulers in Frameworks */,
-				18206F1B293CC17700ED1420 /* SensorReaderKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18206F03293CC17700ED1420 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18206F0C293CC17700ED1420 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18206F10293CC17700ED1420 /* SensorReaderKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,11 +116,11 @@
 		18206EE6293CC13A00ED1420 = {
 			isa = PBXGroup;
 			children = (
+				18733FB629704BA800ECF800 /* SensorReaderKit */,
 				18206EF0293CC13A00ED1420 /* Products */,
 				18206EF1293CC13A00ED1420 /* SensorReader */,
-				18206F07293CC17700ED1420 /* SensorReaderKit */,
-				18206F15293CC17700ED1420 /* SensorReaderKitTests */,
 				18C1F8BC29424B0100ACCF4B /* SensorReaderTests */,
+				18733FB729704C2900ECF800 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,8 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				18206EEF293CC13A00ED1420 /* SensorReader.app */,
-				18206F06293CC17700ED1420 /* SensorReaderKit.framework */,
-				18206F0F293CC17700ED1420 /* SensorReaderKitTests.xctest */,
 				18C1F8BB29424B0100ACCF4B /* SensorReaderTests.xctest */,
 			);
 			name = Products;
@@ -210,25 +158,6 @@
 				18206EFA293CC13B00ED1420 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		18206F07293CC17700ED1420 /* SensorReaderKit */ = {
-			isa = PBXGroup;
-			children = (
-				18206F08293CC17700ED1420 /* SensorReaderKit.h */,
-				18206F24293CC18600ED1420 /* SensorReader.swift */,
-				18206F09293CC17700ED1420 /* SensorReaderKit.docc */,
-			);
-			path = SensorReaderKit;
-			sourceTree = "<group>";
-		};
-		18206F15293CC17700ED1420 /* SensorReaderKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				18206F16293CC17700ED1420 /* SensorReaderKitTests.swift */,
-				18206F26293CC22F00ED1420 /* data.json */,
-			);
-			path = SensorReaderKitTests;
 			sourceTree = "<group>";
 		};
 		1837EBF9294369AA0045CC4E /* Dashboard */ = {
@@ -267,6 +196,13 @@
 				1865ACB629685CDC004BF767 /* SettingsView.swift */,
 			);
 			path = Composition;
+			sourceTree = "<group>";
+		};
+		18733FB729704C2900ECF800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		187F4C9229425E1E00F585B1 /* ReadingsList */ = {
@@ -311,17 +247,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		18206F01293CC17700ED1420 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18206F18293CC17700ED1420 /* SensorReaderKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		18206EEE293CC13A00ED1420 /* SensorReader */ = {
 			isa = PBXNativeTarget;
@@ -335,52 +260,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				18206F1A293CC17700ED1420 /* PBXTargetDependency */,
 			);
 			name = SensorReader;
 			packageProductDependencies = (
 				181BD84C296EC97E00751EE8 /* CombineSchedulers */,
+				18733FB829704C2900ECF800 /* SensorReaderKit */,
 			);
 			productName = SensorReader;
 			productReference = 18206EEF293CC13A00ED1420 /* SensorReader.app */;
 			productType = "com.apple.product-type.application";
-		};
-		18206F05293CC17700ED1420 /* SensorReaderKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 18206F1D293CC17700ED1420 /* Build configuration list for PBXNativeTarget "SensorReaderKit" */;
-			buildPhases = (
-				18206F01293CC17700ED1420 /* Headers */,
-				18206F02293CC17700ED1420 /* Sources */,
-				18206F03293CC17700ED1420 /* Frameworks */,
-				18206F04293CC17700ED1420 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SensorReaderKit;
-			productName = SensorReaderKit;
-			productReference = 18206F06293CC17700ED1420 /* SensorReaderKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		18206F0E293CC17700ED1420 /* SensorReaderKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 18206F21293CC17700ED1420 /* Build configuration list for PBXNativeTarget "SensorReaderKitTests" */;
-			buildPhases = (
-				18206F0B293CC17700ED1420 /* Sources */,
-				18206F0C293CC17700ED1420 /* Frameworks */,
-				18206F0D293CC17700ED1420 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				18206F12293CC17700ED1420 /* PBXTargetDependency */,
-				18206F14293CC17700ED1420 /* PBXTargetDependency */,
-			);
-			name = SensorReaderKitTests;
-			productName = SensorReaderKitTests;
-			productReference = 18206F0F293CC17700ED1420 /* SensorReaderKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		18C1F8BA29424B0100ACCF4B /* SensorReaderTests */ = {
 			isa = PBXNativeTarget;
@@ -413,13 +301,6 @@
 					18206EEE293CC13A00ED1420 = {
 						CreatedOnToolsVersion = 14.1;
 					};
-					18206F05293CC17700ED1420 = {
-						CreatedOnToolsVersion = 14.1;
-					};
-					18206F0E293CC17700ED1420 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 18206EEE293CC13A00ED1420;
-					};
 					18C1F8BA29424B0100ACCF4B = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 18206EEE293CC13A00ED1420;
@@ -443,8 +324,6 @@
 			projectRoot = "";
 			targets = (
 				18206EEE293CC13A00ED1420 /* SensorReader */,
-				18206F05293CC17700ED1420 /* SensorReaderKit */,
-				18206F0E293CC17700ED1420 /* SensorReaderKitTests */,
 				18C1F8BA29424B0100ACCF4B /* SensorReaderTests */,
 			);
 		};
@@ -457,21 +336,6 @@
 			files = (
 				18206EFB293CC13B00ED1420 /* Preview Assets.xcassets in Resources */,
 				18206EF7293CC13B00ED1420 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18206F04293CC17700ED1420 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18206F0D293CC17700ED1420 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18206F27293CC22F00ED1420 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,23 +374,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18206F02293CC17700ED1420 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18206F25293CC18600ED1420 /* SensorReader.swift in Sources */,
-				18206F0A293CC17700ED1420 /* SensorReaderKit.docc in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18206F0B293CC17700ED1420 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18206F17293CC17700ED1420 /* SensorReaderKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		18C1F8B729424B0100ACCF4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,25 +390,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		18206F12293CC17700ED1420 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 18206F05293CC17700ED1420 /* SensorReaderKit */;
-			targetProxy = 18206F11293CC17700ED1420 /* PBXContainerItemProxy */;
-		};
-		18206F14293CC17700ED1420 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 18206EEE293CC13A00ED1420 /* SensorReader */;
-			targetProxy = 18206F13293CC17700ED1420 /* PBXContainerItemProxy */;
-		};
-		18206F1A293CC17700ED1420 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilters = (
-				ios,
-				macos,
-			);
-			target = 18206F05293CC17700ED1420 /* SensorReaderKit */;
-			targetProxy = 18206F19293CC17700ED1420 /* PBXContainerItemProxy */;
-		};
 		18C1F8C029424B0100ACCF4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 18206EEE293CC13A00ED1420 /* SensorReader */;
@@ -759,116 +587,6 @@
 			};
 			name = Release;
 		};
-		18206F1E293CC17700ED1420 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadel.SensorReaderKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		18206F1F293CC17700ED1420 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadel.SensorReaderKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		18206F22293CC17700ED1420 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadel.SensorReaderKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensorReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SensorReader";
-			};
-			name = Debug;
-		};
-		18206F23293CC17700ED1420 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadel.SensorReaderKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensorReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SensorReader";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		18C1F8C229424B0100ACCF4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -929,24 +647,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18206F1D293CC17700ED1420 /* Build configuration list for PBXNativeTarget "SensorReaderKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				18206F1E293CC17700ED1420 /* Debug */,
-				18206F1F293CC17700ED1420 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		18206F21293CC17700ED1420 /* Build configuration list for PBXNativeTarget "SensorReaderKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				18206F22293CC17700ED1420 /* Debug */,
-				18206F23293CC17700ED1420 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		18C1F8C129424B0100ACCF4B /* Build configuration list for PBXNativeTarget "SensorReaderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -974,6 +674,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 181BD84B296EC97E00751EE8 /* XCRemoteSwiftPackageReference "combine-schedulers" */;
 			productName = CombineSchedulers;
+		};
+		18733FB829704C2900ECF800 /* SensorReaderKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SensorReaderKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
