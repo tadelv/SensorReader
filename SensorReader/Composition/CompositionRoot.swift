@@ -39,6 +39,7 @@ struct CompositionRoot {
 
     }
 
+	@MainActor
     var compose: some View {
         RootView(settingsViewModel: settingsViewModel,
                  readingsUseCase: readingsUseCase,

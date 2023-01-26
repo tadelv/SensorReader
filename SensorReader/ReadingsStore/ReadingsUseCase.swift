@@ -5,20 +5,20 @@
 //  Created by Vid Tadel on 12/8/22.
 //
 
-import Combine
+@preconcurrency import Combine
 import CombineSchedulers
 import Foundation
 import SensorReaderKit
 
 // MARK: DI for ReadingsUseCase
 protocol SensorReadingsProvider {
-    func readings() async throws -> [any SensorReading]
+    @Sendable func readings() async throws -> [any SensorReading]
 }
 
 extension SensorReader: SensorReadingsProvider {}
 
 // MARK: - UseCase implementation
-final class ReadingsUseCase: ReadingProviding {
+final class ReadingsUseCase: ReadingProviding, @unchecked Sendable {
     var reader: any SensorReadingsProvider
     private let refreshInterval: Double
     private let scheduler: AnySchedulerOf<DispatchQueue>
@@ -33,7 +33,7 @@ final class ReadingsUseCase: ReadingProviding {
             }
         }, receiveCancel: { [unowned self] in
             Task {
-                await self.subscriptionRemoved()
+				await self.subscriptionRemoved()
             }
         })
         .eraseToAnyPublisher()
@@ -46,25 +46,22 @@ final class ReadingsUseCase: ReadingProviding {
         self.refreshInterval = refreshInterval
         self.scheduler = scheduler
     }
-    @MainActor
+
+	@MainActor
     private func subscriptionReceived(_ sub: any Subscription) {
         subjects.append(sub)
         if schedulerConnection == nil {
-//            schedulerConnection = scheduler.timerPublisher(every: .seconds(refreshInterval))
-//                .autoconnect()
-//                .sink { [weak self] _ in
-//                    self?.timerFired()
-//                }
-//            timerFired()
             schedulerConnection = scheduler.schedule(after: scheduler.now,
                                interval: .seconds(_: refreshInterval),
-                               tolerance: .zero) { [weak self] in
-                self?.timerFired()
+                               tolerance: .zero) {
+				Task { [weak self] in
+					await self?.timerFired()
+				}
             }
         }
     }
 
-    @MainActor
+	@MainActor
     private func subscriptionRemoved() {
         _ = subjects.popLast()
         if subjects.isEmpty {
@@ -72,26 +69,19 @@ final class ReadingsUseCase: ReadingProviding {
         }
     }
 
-    private func timerFired() {
-        Task { [weak self] in
-            guard let self = self else {
-                return
-            }
-            do {
-                let readings = try await self.reader
-                    .readings()
-                    .map(ReadingImpl.init(from:))
-                self.readingsSubject.send(readings)
-            } catch {
-                await stopTimer()
-                self.readingsSubject.send(completion: .failure(error))
-                await MainActor.run {
-                    self.readingsSubject = .init()
-                    self.subjects = []
-                }
-
-            }
-        }
+    private func timerFired() async {
+		do {
+			let readings = try await self.reader
+				.readings()
+				.map(ReadingImpl.init(from:))
+			self.readingsSubject.send(readings)
+		} catch {
+			self.readingsSubject.send(completion: .failure(error))
+			await MainActor.run {
+				stopTimer()
+				resetSubject()
+			}
+		}
     }
 
     @MainActor
@@ -99,6 +89,12 @@ final class ReadingsUseCase: ReadingProviding {
         schedulerConnection?.cancel()
         schedulerConnection = nil
     }
+
+	@MainActor
+	private func resetSubject() {
+		self.readingsSubject = .init()
+		self.subjects = []
+	}
 }
 
 extension ReadingsUseCase {

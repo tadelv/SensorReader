@@ -7,13 +7,13 @@
 
 import Foundation
 
-public protocol NetworkRequestProviding {
+public protocol NetworkRequestProviding: Sendable {
     func data(for request: URLRequest) async throws -> (Data, URLResponse)
 }
 
 extension URLSession: NetworkRequestProviding {}
 
-open class SensorReader {
+public actor SensorReader {
     let provider: NetworkRequestProviding
     let url: URL
 
@@ -23,7 +23,7 @@ open class SensorReader {
         self.url = url
     }
 
-    open func readings() async throws -> [any SensorReading] {
+    public func readings() async throws -> [any SensorReading] {
         let request = URLRequest(url: url)
         let response = try await provider.data(for: request)
         let decoder = JSONDecoder()
@@ -32,7 +32,7 @@ open class SensorReader {
     }
 }
 
-public protocol SensorReading {
+public protocol SensorReading: Sendable {
     var sensorClass: String { get }
     var name: String { get }
     var value: String { get }

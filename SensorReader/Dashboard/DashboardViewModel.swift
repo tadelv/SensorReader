@@ -24,14 +24,8 @@ class DashboardViewModel: ObservableObject {
         self.favoritesProvider = favoritesProvider
     }
 
-    func attach() {
-        state = .loading
-        Task {
-            await load()
-        }
-    }
-
     func load() async {
+		state = .loading
         readingsConnection = readingsProvider
             .readings
             .combineLatest(favoritesProvider.favorites)

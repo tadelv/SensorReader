@@ -65,7 +65,7 @@ struct MockFavoriteProvider: FavoritesProviding {
     }
 
     fileprivate init() {
-        let mocks = MockProvider().mockReadings.value[0...3]
+		let mocks = MockProvider().mockReadings.value[0...3]
         favoritesSubject = CurrentValueSubject(mocks.map { .init(id: $0.id) })
     }
 

@@ -47,9 +47,9 @@ struct DashboardView: View {
             }
             .padding()
         }
-        .onAppear {
-            viewModel.attach()
-        }
+		.task {
+			await viewModel.load()
+		}
     }
 }
 
